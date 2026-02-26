@@ -30,6 +30,7 @@
             --gradient-border: linear-gradient(135deg, #d4a373 0%, #e9c46a 50%, #f4a261 100%);
             --gradient-sky: linear-gradient(135deg, #1d3557 0%, #457b9d 50%, #68a0b3 100%);
             --gradient-warm: linear-gradient(135deg, #e9c46a 0%, #f4a261 50%, #e76f51 100%);
+            --gradient-purple: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             
             /* Sombras */
             --shadow-soft: 0 10px 40px rgba(0,0,0,0.1);
@@ -399,6 +400,300 @@
             z-index: 1;
         }
 
+        /* ===== BUSINESS CASE - EMPLOYEES ===== */
+        .business-case {
+            background: var(--light-cream);
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .case-column {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow-soft);
+            border-top: 5px solid var(--primary-green);
+        }
+
+        .case-column.clients {
+            border-top-color: var(--warm-orange);
+        }
+
+        .case-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .case-column.clients .case-title {
+            color: var(--deep-blue);
+        }
+
+        .case-item {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--light-cream);
+        }
+
+        .case-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .case-item-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-seal);
+            color: var(--white);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .case-column.clients .case-item-number {
+            background: var(--gradient-warm);
+        }
+
+        .case-item-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .case-item-text {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            opacity: 0.8;
+            line-height: 1.7;
+        }
+
+        .case-item-text ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .case-item-text li {
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .case-item-text li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        .case-quote {
+            background: var(--light-cream);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-gold);
+            font-style: italic;
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+
+        /* ===== RESTAURANT EXAMPLE ===== */
+        .restaurant-example {
+            background: var(--white);
+        }
+
+        .example-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .example-card {
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .example-card.bad {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 2px solid #ef4444;
+        }
+
+        .example-card.good {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border: 2px solid var(--primary-green);
+        }
+
+        .example-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .example-card.bad .example-title {
+            color: #dc2626;
+        }
+
+        .example-card.good .example-title {
+            color: var(--primary-green);
+        }
+
+        .example-list {
+            list-style: none;
+        }
+
+        .example-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1rem;
+        }
+
+        .example-card.bad .example-list li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: #dc2626;
+            font-weight: 700;
+        }
+
+        .example-card.good .example-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        .example-result {
+            margin-top: 25px;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        .example-card.bad .example-result {
+            color: #dc2626;
+        }
+
+        .example-card.good .example-result {
+            color: var(--primary-green);
+        }
+
+        /* ===== FUTURE TRENDS ===== */
+        .future-trends {
+            background: var(--gradient-sky);
+            color: var(--white);
+        }
+
+        .future-trends .section-title {
+            color: var(--white);
+        }
+
+        .future-trends .section-subtitle {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .trends-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .trend-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .trend-card:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+
+        .trend-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--warm-orange);
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .trend-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .trend-text {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        /* ===== EXECUTIVE SUMMARY ===== */
+        .executive-summary {
+            background: var(--white);
+        }
+
+        .summary-table-container {
+            overflow-x: auto;
+            margin-top: 60px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-strong);
+        }
+
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+        }
+
+        .summary-table th {
+            background: var(--gradient-seal);
+            color: var(--white);
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .summary-table td {
+            padding: 20px;
+            border-bottom: 1px solid var(--light-cream);
+            font-size: 0.95rem;
+        }
+
+        .summary-table tr:hover {
+            background: var(--light-cream);
+        }
+
+        .summary-table tr:last-child td {
+            border-bottom: none;
+        }
+
         /* ===== WHY ADHERE ===== */
         .why-adhere {
             background: var(--gradient-sky);
@@ -414,7 +709,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url("image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='1' fill='rgba(255,255,255,0.05)'/%3E%3C/svg%3E");
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='1' fill='rgba(255,255,255,0.05)'/%3E%3C/svg%3E");
             background-size: 30px 30px;
         }
 
@@ -524,180 +819,6 @@
         .benefit-highlight {
             color: var(--warm-orange);
             font-weight: 600;
-        }
-
-        /* ===== PUBLIC SECTOR VISION ===== */
-        .public-vision {
-            background: var(--white);
-        }
-
-        .vision-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .vision-card {
-            background: var(--light-cream);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: var(--shadow-soft);
-            border-top: 5px solid var(--deep-blue);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .vision-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--gradient-border);
-        }
-
-        .vision-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-strong);
-        }
-
-        .vision-icon {
-            font-size: 3rem;
-            color: var(--deep-blue);
-            margin-bottom: 25px;
-        }
-
-        .vision-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--deep-blue);
-            margin-bottom: 20px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .vision-text {
-            font-size: 1rem;
-            color: var(--text-dark);
-            opacity: 0.85;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-        .vision-list {
-            list-style: none;
-            margin-top: 20px;
-        }
-
-        .vision-list li {
-            padding: 10px 0;
-            padding-left: 30px;
-            position: relative;
-            font-size: 0.95rem;
-            color: var(--text-dark);
-            opacity: 0.85;
-        }
-
-        .vision-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--primary-green);
-            font-weight: 700;
-        }
-
-        /* ===== WHAT IS AMBIENTE 60+ ===== */
-        .what-is {
-            background: var(--light-cream);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .what-is::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 60%;
-            height: 200%;
-            background: var(--gradient-seal);
-            opacity: 0.05;
-            transform: rotate(15deg);
-        }
-
-        .definition-box {
-            background: var(--gradient-seal);
-            color: var(--white);
-            padding: 60px;
-            border-radius: 30px;
-            text-align: center;
-            margin: 40px 0;
-            box-shadow: var(--shadow-strong);
-            position: relative;
-            z-index: 1;
-            border: 3px solid var(--accent-gold);
-        }
-
-        .definition-text {
-            font-size: clamp(1.3rem, 3vw, 1.8rem);
-            font-weight: 300;
-            line-height: 1.8;
-            max-width: 1000px;
-            margin: 0 auto;
-            font-style: italic;
-        }
-
-        .definition-highlight {
-            font-weight: 600;
-            color: var(--warm-orange);
-        }
-
-        .pillars-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .pillar-card {
-            text-align: center;
-            padding: 40px 30px;
-            background: var(--white);
-            border-radius: 20px;
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow-soft);
-            border-bottom: 4px solid var(--primary-green);
-        }
-
-        .pillar-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-strong);
-        }
-
-        .pillar-icon {
-            font-size: 3rem;
-            color: var(--primary-green);
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .pillar-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--primary-green);
-            margin-bottom: 15px;
-        }
-
-        .pillar-text {
-            font-size: 0.95rem;
-            color: var(--text-dark);
-            opacity: 0.8;
-            line-height: 1.6;
         }
 
         /* ===== 15 PRINCIPLES ===== */
@@ -843,7 +964,7 @@
             line-height: 1.7;
         }
 
-        /* ===== SECTORS ===== */
+        /* ===== 11 SECTORS ===== */
         .sectors {
             background: var(--gradient-seal);
             color: var(--white);
@@ -867,10 +988,22 @@
 
         .sectors-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
             position: relative;
             z-index: 2;
+        }
+
+        @media (min-width: 992px) {
+            .sectors-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .sectors-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
         }
 
         .sector-card {
@@ -913,54 +1046,9 @@
         }
 
         .animo-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .animo-image {
-            position: relative;
-        }
-
-        .animo-image img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 20px;
-            box-shadow: var(--shadow-strong);
-            border: 4px solid var(--accent-gold);
-            object-fit: cover;
-            object-position: center top;
-        }
-
-        .animo-image::before {
-            content: '';
-            position: absolute;
-            top: -15px;
-            left: -15px;
-            right: 15px;
-            bottom: 15px;
-            border: 3px solid var(--primary-green);
-            border-radius: 20px;
-            z-index: -1;
-            opacity: 0.5;
-        }
-
-        .animo-image::after {
-            content: '';
-            position: absolute;
-            top: -8px;
-            left: -8px;
-            right: 8px;
-            bottom: 8px;
-            border: 2px solid var(--accent-gold);
-            border-radius: 20px;
-            z-index: -1;
-        }
-
-        .animo-image:hover img {
-            transform: scale(1.02);
-            transition: transform 0.3s ease;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
         }
 
         .animo-text h3 {
@@ -985,6 +1073,7 @@
             margin-top: 30px;
             border-left: 4px solid var(--primary-green);
             border-top: 3px solid var(--accent-gold);
+            text-align: left;
         }
 
         .founder-name {
@@ -1007,6 +1096,46 @@
         .founder-title i {
             color: var(--primary-green);
             width: 20px;
+        }
+
+        /* ===== FINAL MESSAGE ===== */
+        .final-message {
+            background: var(--gradient-warm);
+            color: var(--white);
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .message-box {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 50px;
+            border-radius: 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .message-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .message-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .message-highlight {
+            font-weight: 700;
+            color: var(--white);
+            font-size: 1.3rem;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(255,255,255,0.3);
         }
 
         /* ===== CTA SECTION ===== */
@@ -1157,11 +1286,11 @@
                 transform: translateX(-50%);
             }
 
-            .animo-content {
+            .case-grid {
                 grid-template-columns: 1fr;
             }
 
-            .vision-grid {
+            .example-container {
                 grid-template-columns: 1fr;
             }
         }
@@ -1169,10 +1298,6 @@
         @media (max-width: 768px) {
             section {
                 padding: 60px 0;
-            }
-
-            .definition-box {
-                padding: 40px 25px;
             }
 
             .cta-buttons {
@@ -1195,6 +1320,15 @@
                 width: 100%;
                 max-width: 300px;
                 text-align: center;
+            }
+
+            .summary-table-container {
+                font-size: 0.85rem;
+            }
+
+            .summary-table th,
+            .summary-table td {
+                padding: 15px 10px;
             }
         }
 
@@ -1277,6 +1411,7 @@
             </button>
             <ul class="navbar-menu" id="navbarMenu">
                 <li><a href="#home">Início</a></li>
+                <li><a href="#business-case">Business Case</a></li>
                 <li><a href="#why-adhere">Por Que Aderir</a></li>
                 <li><a href="#principles">Princípios</a></li>
                 <li><a href="#process">Processo</a></li>
@@ -1292,25 +1427,14 @@
         <div class="hero-content">
             <div class="seal-logo">
                 <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Outer Ring - Green -->
                     <circle cx="200" cy="200" r="195" fill="#2d6a4f" stroke="#d4a373" stroke-width="8"/>
                     <circle cx="200" cy="200" r="185" fill="#2d6a4f"/>
-                    
-                    <!-- Gold Border -->
                     <circle cx="200" cy="200" r="175" fill="none" stroke="#d4a373" stroke-width="4"/>
-                    
-                    <!-- Top Text -->
                     <path id="topCurve" d="M 80 200 A 120 120 0 0 1 320 200" fill="none"/>
                     <text font-size="28" font-weight="bold" fill="#f8f9fa" font-family="Montserrat">
-                        <textPath href="#topCurve" startOffset="50%" text-anchor="middle">
-                            AMBIENTE:60+
-                        </textPath>
+                        <textPath href="#topCurve" startOffset="50%" text-anchor="middle">AMBIENTE:60+</textPath>
                     </text>
-                    
-                    <!-- Inner Circle Background -->
                     <circle cx="200" cy="200" r="140" fill="#1d3557" opacity="0.3"/>
-                    
-                    <!-- Sun -->
                     <circle cx="200" cy="100" r="25" fill="#f4a261"/>
                     <g stroke="#f4a261" stroke-width="3">
                         <line x1="200" y1="70" x2="200" y2="55"/>
@@ -1322,19 +1446,13 @@
                         <line x1="175" y1="125" x2="162" y2="138"/>
                         <line x1="225" y1="125" x2="238" y2="138"/>
                     </g>
-                    
-                    <!-- Tree -->
                     <rect x="190" y="140" width="20" height="60" fill="#8b4513"/>
                     <ellipse cx="200" cy="130" rx="70" ry="50" fill="#40916c"/>
                     <ellipse cx="180" cy="140" rx="40" ry="35" fill="#52b788"/>
                     <ellipse cx="220" cy="140" rx="40" ry="35" fill="#52b788"/>
-                    
-                    <!-- Bottom Text -->
                     <path id="bottomCurve" d="M 100 200 A 100 100 0 0 0 300 200" fill="none"/>
                     <text font-size="16" fill="#f8f9fa" font-family="Montserrat">
-                        <textPath href="#bottomCurve" startOffset="50%" text-anchor="middle">
-                            Cidadania - Respeito - Empatia
-                        </textPath>
+                        <textPath href="#bottomCurve" startOffset="50%" text-anchor="middle">Cidadania - Respeito - Empatia</textPath>
                     </text>
                 </svg>
             </div>
@@ -1345,9 +1463,9 @@
                 Não é apenas um selo — é um compromisso com a dignidade, autonomia e valor social da pessoa longeva.
             </p>
             <div class="cta-buttons">
-                <a href="#why-adhere" class="btn btn-primary">
-                    <i class="fas fa-arrow-right"></i>
-                    Por Que Aderir?
+                <a href="#business-case" class="btn btn-primary">
+                    <i class="fas fa-chart-line"></i>
+                    Ver Business Case
                 </a>
                 <a href="#process" class="btn btn-secondary">
                     <i class="fas fa-play"></i>
@@ -1356,7 +1474,7 @@
             </div>
             <div class="impact-badges">
                 <span class="impact-badge">✓ 15 Princípios Universais</span>
-                <span class="impact-badge">✓ 8 Setores Atendidos</span>
+                <span class="impact-badge">✓ 11 Setores Atendidos</span>
                 <span class="impact-badge">✓ ESG & Responsabilidade Social</span>
                 <span class="impact-badge">✓ Melhoria Contínua</span>
             </div>
@@ -1366,46 +1484,319 @@
         </div>
     </section>
 
-    <!-- Longevity Economy -->
-    <section class="longevity-economy" id="economy">
+    <!-- Business Case - Employees & Clients -->
+    <section class="business-case" id="business-case">
         <div class="container">
             <div class="section-header fade-in">
-                <span class="section-tag">Nova Economia</span>
-                <h2 class="section-title">A Economia Longeva Chegou</h2>
+                <span class="section-tag">Business Case</span>
+                <h2 class="section-title">Por Que Valorizar Pessoas 60+?</h2>
                 <p class="section-subtitle">
-                    O aumento da expectativa de vida está transformando modelos de negócios em todo o mundo. 
-                    Organizações que se antecipam a esta mudança colhem resultados extraordinários.
+                    Dados concretos que demonstram o valor estratégico da longevidade ativa no ambiente corporativo e no mercado consumidor.
                 </p>
             </div>
-            <div class="stats-grid">
-                <div class="stat-card fade-in">
-                    <div class="stat-number">60+</div>
-                    <div class="stat-label">Milhões no Brasil</div>
-                    <div class="stat-description">
-                        Pessoas com 60 anos ou mais representam um mercado em expansão acelerada
+
+            <div class="case-grid">
+                <!-- COLABORADORES 60+ -->
+                <div class="case-column fade-in">
+                    <h3 class="case-title">
+                        <i class="fas fa-users"></i>
+                        Colaboradores 60+
+                    </h3>
+
+                    <div class="case-item">
+                        <span class="case-item-number">1</span>
+                        <h4 class="case-item-title">Tesouro de Experiência e Sabedoria</h4>
+                        <div class="case-item-text">
+                            <ul>
+                                <li>Sabem como a empresa funcionava em crises passadas</li>
+                                <li>Têm redes de relacionamento consolidadas</li>
+                                <li>Tomam decisões com mais ponderação e menos impulsividade</li>
+                                <li>São <strong>mentores naturais</strong> para os mais jovens</li>
+                            </ul>
+                            <div class="case-quote">
+                                "Um jovem engenheiro sabe a teoria; um engenheiro de 60 anos sabe onde a teoria falha na prática."
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="case-item">
+                        <span class="case-item-number">2</span>
+                        <h4 class="case-item-title">Lealdade e Comprometimento Inigualáveis</h4>
+                        <div class="case-item-text">
+                            <ul>
+                                <li>Permanecem <strong>3x mais tempo</strong> nas empresas que millennials</li>
+                                <li>Têm <strong>menos absenteísmo</strong> por motivos fúteis</li>
+                                <li>São mais engajados com a cultura organizacional</li>
+                                <li>Custa <strong>menos</strong> que a rotatividade constante de jovens</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="case-item">
+                        <span class="case-item-number">3</span>
+                        <h4 class="case-item-title">Diversidade Geracional como Vantagem</h4>
+                        <div class="case-item-text">
+                            <ul>
+                                <li>Decisões <strong>mais equilibradas</strong> (diferentes perspectivas)</li>
+                                <li>Entendem melhor <strong>diferentes públicos consumidores</strong></li>
+                                <li>Reduzem <strong>conflitos internos</strong> (mentoria cruzada)</li>
+                                <li>São vistas como <strong>inclusivas e humanizadas</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="case-item">
+                        <span class="case-item-number">4</span>
+                        <h4 class="case-item-title">Produtividade Adaptada, Não Diminuída</h4>
+                        <div class="case-item-text">
+                            <p>Estudos da <strong>Stanford University</strong> mostram que trabalhadores mais velhos:</p>
+                            <ul>
+                                <li>São tão produtivos quanto jovens</li>
+                                <li>Cometem <strong>menos erros</strong> em tarefas complexas</li>
+                                <li>Têm <strong>maior inteligência emocional</strong> para lidar com pressão</li>
+                                <li>Adaptam-se bem a novas tecnologias <strong>quando bem treinados</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="case-item">
+                        <span class="case-item-number">5</span>
+                        <h4 class="case-item-title">Resiliência e Estabilidade em Crises</h4>
+                        <div class="case-item-text">
+                            <ul>
+                                <li>São os que <strong>menos entram em pânico</strong></li>
+                                <li>Mantêm a <strong>calma</strong> para orientar equipes</li>
+                                <li>Oferecem <strong>conselhos valiosos</strong> baseados em experiências anteriores</li>
+                                <li>Transmitem <strong>segurança</strong> para clientes e colegas</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">30%</div>
-                    <div class="stat-label">Crescimento Anual</div>
-                    <div class="stat-description">
-                        Do poder de consumo da população longeva nos próximos 10 anos
+
+                <!-- CLIENTES 60+ -->
+                <div class="case-column clients fade-in">
+                    <h3 class="case-title">
+                        <i class="fas fa-shopping-cart"></i>
+                        Clientes 60+
+                    </h3>
+
+                    <div class="case-item">
+                        <span class="case-item-number">1</span>
+                        <h4 class="case-item-title">Poder Econômico Concentrado</h4>
+                        <div class="case-item-text">
+                            <ul>
+                                <li>No Brasil, pessoas 60+ controlam <strong>mais de 50% da renda disponível</strong></li>
+                                <li>Aposentados têm <strong>renda estável e previsível</strong></li>
+                                <li>Representam um mercado de <strong>R$ 2 trilhões</strong> (Silver Economy)</li>
+                                <li>Pagam <strong>à vista</strong> ou com <strong>menor inadimplência</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="case-item">
+                        <span class="case-item-number">2</span>
+                        <h4 class="case-item-title">Lealdade Extrema à Marca</h4>
+                        <div class="case-item-text">
+                            <ul>
+                                <li>Idosos são <strong>7x mais leais</strong> que consumidores jovens</li>
+                                <li>Tornam-se <strong>clientes vitalícios</strong></li>
+                                <li>Indicam para <strong>família e amigos</strong></li>
+                                <li>Perdoam mais facilmente <strong>pequenos erros</strong> (se bem tratados)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="case-item">
+                        <span class="case-item-number">3</span>
+                        <h4 class="case-item-title">Consumo de Maior Valor Agregado</h4>
+                        <div class="case-item-text">
+                            <p>Gastam mais com:</p>
+                            <ul>
+                                <li><strong>Saúde e bem-estar</strong> (planos, medicamentos, acompanhamento)</li>
+                                <li><strong>Lazer e viagens</strong> (turismo 60+ é o que mais cresce)</li>
+                                <li><strong>Alimentação fora de casa</strong> (restaurantes de qualidade)</li>
+                                <li><strong>Serviços personalizados</strong> (cuidados, assessorias)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="case-item">
+                        <span class="case-item-number">4</span>
+                        <h4 class="case-item-title">Efeito Multiplicador Familiar</h4>
+                        <div class="case-item-text">
+                            <p>Atender bem um idoso é conquistar:</p>
+                            <ul>
+                                <li>Seus <strong>filhos</strong> (geração X e millennials)</li>
+                                <li>Seus <strong>netos</strong> (geração Z)</li>
+                                <li>Seus <strong>amigos</strong> do clube, igreja ou grupo de convivência</li>
+                                <li><strong>Boca a boca</strong> mais poderoso que qualquer campanha</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="case-item">
+                        <span class="case-item-number">5</span>
+                        <h4 class="case-item-title">Tendência Demográfica Irreversível</h4>
+                        <div class="case-item-text">
+                            <ul>
+                                <li>Em 2030, Brasil terá <strong>43 milhões de idosos</strong> (IBGE)</li>
+                                <li>Serão <strong>maioria da população</strong> em muitas cidades</li>
+                                <li>Empresas que não se adaptarem perderão <strong>fatia significativa de mercado</strong></li>
+                                <li>Serão vistas como <strong>discriminatórias</strong></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">85%</div>
-                    <div class="stat-label">Fidelidade</div>
-                    <div class="stat-description">
-                        Clientes 60+ demonstram maior lealdade quando tratados com respeito e dignidade
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Example -->
+    <section class="restaurant-example" id="example">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Exemplo Prático</span>
+                <h2 class="section-title">O Impacto do Atendimento</h2>
+                <p class="section-subtitle">
+                    Um octogenário no restaurante: duas abordagens, dois resultados completamente diferentes.
+                </p>
+            </div>
+
+            <div class="example-container">
+                <div class="example-card bad fade-in">
+                    <h3 class="example-title">
+                        <i class="fas fa-times-circle"></i>
+                        Atendimento Ruim
+                    </h3>
+                    <ul class="example-list">
+                        <li>Cliente de 82 anos entra no restaurante</li>
+                        <li>Garçom impaciente, cardápio com letras minúsculas</li>
+                        <li>Iluminação fraca, cadeiras desconfortáveis</li>
+                        <li>Nenhuma oferta de auxílio</li>
+                    </ul>
+                    <div class="example-result">
+                        <strong>Resultado:</strong> Cliente não volta, conta para 20 amigos na igreja, escreve reclamação no Google, filha (cliente em potencial) nunca visita o lugar
                     </div>
                 </div>
-                <div class="stat-card fade-in">
-                    <div class="stat-number">∞</div>
-                    <div class="stat-label">Impacto Positivo</div>
-                    <div class="stat-description">
-                        Sinergias que beneficiam todos os públicos, não apenas pessoas longevas
+
+                <div class="example-card good fade-in">
+                    <h3 class="example-title">
+                        <i class="fas fa-check-circle"></i>
+                        Atendimento Excelente
+                    </h3>
+                    <ul class="example-list">
+                        <li>Cliente recebido com <strong>paciência e sorriso</strong></li>
+                        <li>Oferecem <strong>cardápio com letras ampliadas</strong> ou leem os pratos com calma</li>
+                        <li>Indicam <strong>pratos mais macios</strong>, se necessário</li>
+                        <li>Ajudam com a cadeira, iluminação adequada</li>
+                        <li>Perguntam se precisa de <strong>auxílio com o celular</strong></li>
+                    </ul>
+                    <div class="example-result">
+                        <strong>Resultado:</strong> Cliente volta semanalmente, traz amigos, indica para os filhos, vira <strong>embaixador da marca</strong>, faz posts positivos, o restaurante ganha reputação de "lugar acolhedor para todas as idades"
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Trends -->
+    <section class="future-trends" id="trends">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Futuro</span>
+                <h2 class="section-title">A Revolução da Longevidade</h2>
+                <p class="section-subtitle">
+                    Tendências globais que mostram por que se antecipar é estratégico.
+                </p>
+            </div>
+
+            <div class="trends-grid">
+                <div class="trend-card fade-in">
+                    <div class="trend-number">1</div>
+                    <h3 class="trend-title">Silver Economy Dominante</h3>
+                    <p class="trend-text">
+                        Será a <strong>maior economia do mundo</strong> até 2035 (ONU, Banco Mundial, WEF)
+                    </p>
+                </div>
+
+                <div class="trend-card fade-in">
+                    <div class="trend-number">5x</div>
+                    <h3 class="trend-title">Crescimento do Consumo</h3>
+                    <p class="trend-text">
+                        Consumo 60+ crescerá <strong>5x mais</strong> que o consumo jovem
+                    </p>
+                </div>
+
+                <div class="trend-card fade-in">
+                    <div class="trend-number">15M</div>
+                    <h3 class="trend-title">Mercado de Trabalho</h3>
+                    <p class="trend-text">
+                        Brasil precisará de <strong>15 milhões de trabalhadores 50+</strong> até 2040
+                    </p>
+                </div>
+
+                <div class="trend-card fade-in">
+                    <div class="trend-number">60%</div>
+                    <h3 class="trend-title">Turismo 60+</h3>
+                    <p class="trend-text">
+                        Representará <strong>60% do mercado de viagens</strong>
+                    </p>
+                </div>
+
+                <div class="trend-card fade-in">
+                    <div class="trend-number">∞</div>
+                    <h3 class="trend-title">Tecnologia Assistiva</h3>
+                    <p class="trend-text">
+                        Setor que <strong>mais crescerá</strong> nas próximas décadas
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section class="executive-summary" id="summary">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Para Gestores</span>
+                <h2 class="section-title">Resumo Executivo</h2>
+                <p class="section-subtitle">
+                    O que fazer agora e o que ganhar em 2 anos.
+                </p>
+            </div>
+
+            <div class="summary-table-container fade-in">
+                <table class="summary-table">
+                    <thead>
+                        <tr>
+                            <th>Área</th>
+                            <th>O que fazer agora</th>
+                            <th>Ganho em 2 anos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>RH</strong></td>
+                            <td>Programas de mentoria reversa, ergonomia, flexibilidade</td>
+                            <td>Retenção de talentos, redução de turnover</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Marketing</strong></td>
+                            <td>Comunicação inclusiva, canais acessíveis</td>
+                            <td>Novo segmento de clientes, fidelização</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Operações</strong></td>
+                            <td>Acessibilidade física e digital</td>
+                            <td>Experiência superior, boca a boca positivo</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Inovação</strong></td>
+                            <td>Produtos/serviços para 60+</td>
+                            <td>Novos mercados, diferenciação</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
@@ -1417,8 +1808,7 @@
                 <span class="section-tag">Por Que Aderir</span>
                 <h2 class="section-title">Vantagens Competitivas Reais</h2>
                 <p class="section-subtitle">
-                    O Selo Ambiente 60+ sinaliza ao mercado e à sociedade um compromisso genuíno 
-                    com cidadania, inclusão e humanização.
+                    O Selo Ambiente 60+ sinaliza ao mercado e à sociedade um compromisso genuíno com cidadania, inclusão e humanização.
                 </p>
             </div>
 
@@ -1436,7 +1826,7 @@
                         </div>
                         <h3 class="benefit-title">Diferenciação Competitiva Imediata</h3>
                         <p class="benefit-text">
-                            Enquanto a maioria fala de "bom atendimento", o selo vira um <span class="benefit-highlight">sinal visível de compromisso real</span> com respeito, acolhimento e humanização. É um "atalho de confiança" na escolha do cliente.
+                            Enquanto a maioria fala de "bom atendimento", o selo vira um <span class="benefit-highlight">sinal visível de compromisso real</span> com respeito, acolhimento e humanização.
                         </p>
                     </div>
                     <div class="benefit-card fade-in">
@@ -1445,7 +1835,7 @@
                         </div>
                         <h3 class="benefit-title">Fidelização e Recorrência</h3>
                         <p class="benefit-text">
-                            Público 60+ valoriza <span class="benefit-highlight">previsibilidade, segurança e cuidado</span>. Quando encontra um ambiente respeitoso e empático, tende a voltar, recomendar e vir acompanhado (família, amigos, grupos).
+                            Público 60+ valoriza <span class="benefit-highlight">previsibilidade, segurança e cuidado</span>. Quando encontra um ambiente respeitoso, tende a voltar e recomendar.
                         </p>
                     </div>
                     <div class="benefit-card fade-in">
@@ -1454,43 +1844,16 @@
                         </div>
                         <h3 class="benefit-title">Reputação e Marca Empregadora</h3>
                         <p class="benefit-text">
-                            O selo não melhora só a vitrine: melhora a cultura. Empresas com práticas de respeito e empatia se tornam mais <span class="benefit-highlight">admiradas e atraentes</span> para clientes, parceiros e talentos.
+                            Empresas com práticas de respeito e empatia se tornam mais <span class="benefit-highlight">admiradas e atraentes</span> para clientes, parceiros e talentos.
                         </p>
                     </div>
                     <div class="benefit-card fade-in">
                         <div class="benefit-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h3 class="benefit-title">Redução de Conflitos e Reclamações</h3>
+                        <h3 class="benefit-title">Redução de Conflitos</h3>
                         <p class="benefit-text">
-                            Ambientes inclusivos e acolhedores diminuem atritos: atendimento mais paciente, comunicação mais clara. Resultado: <span class="benefit-highlight">menos estresse, menos reclamação</span>, mais fluidez na operação.
-                        </p>
-                    </div>
-                    <div class="benefit-card fade-in">
-                        <div class="benefit-icon">
-                            <i class="fas fa-users-cog"></i>
-                        </div>
-                        <h3 class="benefit-title">Treinamento e Padrão Humano</h3>
-                        <p class="benefit-text">
-                            A adesão ao selo é uma oportunidade de criar linguagem, postura e rituais de atendimento melhores — <span class="benefit-highlight">úteis para todos</span>, não só para 60+. Atendimento humanizado melhora a experiência de qualquer pessoa.
-                        </p>
-                    </div>
-                    <div class="benefit-card fade-in">
-                        <div class="benefit-icon">
-                            <i class="fas fa-universal-access"></i>
-                        </div>
-                        <h3 class="benefit-title">Acessibilidade como Estratégia</h3>
-                        <p class="benefit-text">
-                            Ajustes simples (comunicação, sinalização, ergonomia, acolhimento, paciência) aumentam conforto e segurança — e normalmente <span class="benefit-highlight">custam pouco</span> comparado ao retorno em satisfação e preferência.
-                        </p>
-                    </div>
-                    <div class="benefit-card fade-in">
-                        <div class="benefit-icon">
-                            <i class="fas fa-balance-scale"></i>
-                        </div>
-                        <h3 class="benefit-title">Mitigação de Riscos</h3>
-                        <p class="benefit-text">
-                            Respeito e cidadania não são "perfumaria". O selo ajuda a empresa a reduzir riscos ligados a constrangimentos, discriminação, tratamento indigno — que <span class="benefit-highlight">viram crise rápido</span> nas redes sociais.
+                            Ambientes inclusivos diminuem atritos: <span class="benefit-highlight">menos estresse, menos reclamação</span>, mais fluidez na operação.
                         </p>
                     </div>
                     <div class="benefit-card fade-in">
@@ -1499,16 +1862,7 @@
                         </div>
                         <h3 class="benefit-title">Alinhamento com ESG</h3>
                         <p class="benefit-text">
-                            ESG não é só meio ambiente. O selo fortalece o <span class="benefit-highlight">S (social) e o G (governança)</span> com uma pauta concreta e mensurável: dignidade, empatia, respeito e experiência segura.
-                        </p>
-                    </div>
-                    <div class="benefit-card fade-in">
-                        <div class="benefit-icon">
-                            <i class="fas fa-flag"></i>
-                        </div>
-                        <h3 class="benefit-title">Impacto Social + Orgulho</h3>
-                        <p class="benefit-text">
-                            Quando a empresa adere, ela comunica: "aqui o idoso é bem-vindo e respeitado". Isso gera <span class="benefit-highlight">orgulho interno</span>, engaja equipes e cria vínculo emocional com a comunidade.
+                            O selo fortalece o <span class="benefit-highlight">S (social) e o G (governança)</span> com uma pauta concreta: dignidade, empatia, respeito.
                         </p>
                     </div>
                     <div class="benefit-card fade-in">
@@ -1517,7 +1871,7 @@
                         </div>
                         <h3 class="benefit-title">Crescimento de Mercado</h3>
                         <p class="benefit-text">
-                            O consumo e a presença de pessoas 60+ em serviços, lazer, saúde, turismo, varejo e mobilidade só tendem a crescer — e <span class="benefit-highlight">quem acolhe melhor, vende mais e fideliza mais</span>.
+                            O consumo 60+ só tende a crescer — e <span class="benefit-highlight">quem acolhe melhor, vende mais e fideliza mais</span>.
                         </p>
                     </div>
                 </div>
@@ -1530,18 +1884,9 @@
                         <div class="benefit-icon">
                             <i class="fas fa-landmark"></i>
                         </div>
-                        <h3 class="benefit-title">Cumprimento Qualificado do Dever Público</h3>
+                        <h3 class="benefit-title">Cumprimento do Dever Público</h3>
                         <p class="benefit-text">
-                            Mais do que "atender", o Estado tem obrigação de garantir dignidade. O selo organiza isso em <span class="benefit-highlight">padrão de serviço</span>: respeito, empatia e cidadania como entrega concreta.
-                        </p>
-                    </div>
-                    <div class="benefit-card fade-in">
-                        <div class="benefit-icon">
-                            <i class="fas fa-door-open"></i>
-                        </div>
-                        <h3 class="benefit-title">Melhoria Real do Acesso</h3>
-                        <p class="benefit-text">
-                            Público 60+ enfrenta barreiras invisíveis: fila, linguagem difícil, falta de orientação, medo de errar, humilhação. O selo ajuda a <span class="benefit-highlight">redesenhar a jornada</span> do usuário para acesso com menos fricção.
+                            Mais do que "atender", o Estado tem obrigação de garantir dignidade. O selo organiza isso em <span class="benefit-highlight">padrão de serviço</span>.
                         </p>
                     </div>
                     <div class="benefit-card fade-in">
@@ -1550,226 +1895,45 @@
                         </div>
                         <h3 class="benefit-title">Redução de Judicialização</h3>
                         <p class="benefit-text">
-                            Atendimento desumanizado vira conflito, denúncia, ouvidoria, Ministério Público e processo. Um padrão humanizado tende a <span class="benefit-highlight">reduzir ruído</span> e diminuir demandas repetitivas.
+                            Atendimento humanizado tende a <span class="benefit-highlight">reduzir ruído</span> e diminuir demandas repetitivas.
                         </p>
                     </div>
                     <div class="benefit-card fade-in">
                         <div class="benefit-icon">
                             <i class="fas fa-cogs"></i>
                         </div>
-                        <h3 class="benefit-title">Mais Eficiência e Menos Retrabalho</h3>
+                        <h3 class="benefit-title">Mais Eficiência</h3>
                         <p class="benefit-text">
-                            Quando o atendimento é claro e acolhedor, a pessoa entende o que fazer, traz documentação certa, não volta várias vezes. Resultado: <span class="benefit-highlight">menos idas e vindas</span>, menos filas, menos retrabalho.
+                            Quando o atendimento é claro, a pessoa entende o que fazer. Resultado: <span class="benefit-highlight">menos idas e vindas</span>, menos retrabalho.
                         </p>
                     </div>
                     <div class="benefit-card fade-in">
                         <div class="benefit-icon">
                             <i class="fas fa-handshake"></i>
                         </div>
-                        <h3 class="benefit-title">Fortalece a Confiança no Estado</h3>
+                        <h3 class="benefit-title">Confiança no Estado</h3>
                         <p class="benefit-text">
-                            Um órgão que trata bem as pessoas 60+ melhora percepção de legitimidade: "o governo funciona e me respeita". <span class="benefit-highlight">Confiança é um ativo público</span> gigantesco — e difícil de recuperar quando se perde.
-                        </p>
-                    </div>
-                    <div class="benefit-card fade-in">
-                        <div class="benefit-icon">
-                            <i class="fas fa-chart-pie"></i>
-                        </div>
-                        <h3 class="benefit-title">Alinha a Evidências Demográficas</h3>
-                        <p class="benefit-text">
-                            O Brasil está envelhecendo. Órgãos que se adaptam agora evitam colapso futuro de atendimento e se tornam referência. O selo é uma forma prática de <span class="benefit-highlight">antecipar o inevitável</span>.
-                        </p>
-                    </div>
-                    <div class="benefit-card fade-in">
-                        <div class="benefit-icon">
-                            <i class="fas fa-hospital"></i>
-                        </div>
-                        <h3 class="benefit-title">Qualifica Áreas Finalísticas Críticas</h3>
-                        <p class="benefit-text">
-                            Saúde, assistência social, previdência, mobilidade, segurança, justiça: em todas essas pontas o 60+ é usuário frequente. O selo vira uma <span class="benefit-highlight">"camada" transversal</span> que melhora tudo.
+                            Um órgão que trata bem as pessoas 60+ melhora percepção de legitimidade. <span class="benefit-highlight">Confiança é um ativo público</span> gigantesco.
                         </p>
                     </div>
                     <div class="benefit-card fade-in">
                         <div class="benefit-icon">
                             <i class="fas fa-sitemap"></i>
                         </div>
-                        <h3 class="benefit-title">Padronização entre Unidades</h3>
+                        <h3 class="benefit-title">Padronização</h3>
                         <p class="benefit-text">
-                            Governo sofre com "cada unidade faz de um jeito". O selo cria critérios, rotinas e linguagem comuns, facilitando <span class="benefit-highlight">replicação em rede</span> (capitais e interior) com consistência.
+                            O selo cria critérios comuns, facilitando <span class="benefit-highlight">replicação em rede</span> com consistência.
                         </p>
                     </div>
                     <div class="benefit-card fade-in">
                         <div class="benefit-icon">
                             <i class="fas fa-clipboard-check"></i>
                         </div>
-                        <h3 class="benefit-title">Instrumento de Gestão e Auditoria</h3>
+                        <h3 class="benefit-title">Instrumento de Gestão</h3>
                         <p class="benefit-text">
-                            Para gestores, o selo vira ferramenta: metas, checklists, monitoramento, melhoria contínua, capacitação. Ajuda a demonstrar <span class="benefit-highlight">governança e evolução</span> do serviço.
+                            Para gestores, o selo vira ferramenta: metas, checklists, monitoramento. Ajuda a demonstrar <span class="benefit-highlight">governança</span>.
                         </p>
                     </div>
-                    <div class="benefit-card fade-in">
-                        <div class="benefit-icon">
-                            <i class="fas fa-gavel"></i>
-                        </div>
-                        <h3 class="benefit-title">Humanização no Judiciário</h3>
-                        <p class="benefit-text">
-                            Fóruns, varas, juizados, balcões: o selo ajuda a tornar o acesso mais compreensível e respeitoso, <span class="benefit-highlight">reduzindo ansiedade</span> e sensação de "desamparo" — especialmente em quem já tem vulnerabilidades.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Public Sector Vision -->
-    <section class="public-vision" id="public-vision">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-tag">Visão Estratégica</span>
-                <h2 class="section-title">O Selo nos Três Poderes</h2>
-                <p class="section-subtitle">
-                    Uma resposta prática ao envelhecimento populacional brasileiro. 
-                    Não é apenas uma decisão de imagem — é uma decisão de governança, eficiência e dever institucional.
-                </p>
-            </div>
-
-            <div class="vision-grid">
-                <div class="vision-card fade-in">
-                    <div class="vision-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3 class="vision-title">Poder Executivo</h3>
-                    <p class="vision-text">
-                        O selo ajuda a organizar o atendimento ao cidadão com foco na dignidade: reduz barreiras invisíveis que afetam especialmente as pessoas 60+, como linguagem burocrática, falta de orientação, instabilidade de fluxos, filas confusas e ambientes pouco acolhedores.
-                    </p>
-                    <ul class="vision-list">
-                        <li>Saúde e assistência social</li>
-                        <li>Previdência e mobilidade urbana</li>
-                        <li>Cultura, turismo e segurança</li>
-                        <li>Autarquias e fundações públicas</li>
-                        <li>Secretarias e unidades descentralizadas</li>
-                    </ul>
-                </div>
-
-                <div class="vision-card fade-in">
-                    <div class="vision-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h3 class="vision-title">Poder Judiciário</h3>
-                    <p class="vision-text">
-                        O selo funciona como uma camada de humanização do acesso: balcões, fóruns, varas, juizados, centrais e atendimentos frequentemente colocam o cidadão em situação de ansiedade, insegurança e sensação de "não pertencimento".
-                    </p>
-                    <ul class="vision-list">
-                        <li>Fóruns e varas especializadas</li>
-                        <li>Juizados e centrais de mandados</li>
-                        <li>Atendimentos e conciliações</li>
-                        <li>Redução de incidentes e conflitos</li>
-                        <li>Fortalecimento da confiança pública</li>
-                    </ul>
-                </div>
-
-                <div class="vision-card fade-in">
-                    <div class="vision-icon">
-                        <i class="fas fa-landmark"></i>
-                    </div>
-                    <h3 class="vision-title">Poder Legislativo</h3>
-                    <p class="vision-text">
-                        O Legislativo tem um papel ainda mais estratégico: além de atender diretamente, ele <strong>emana boas práticas para a sociedade</strong>. Ao aderir ao Selo 60+, câmaras municipais, assembleias legislativas e o Congresso podem se tornar vitrines de cidadania e respeito.
-                    </p>
-                    <ul class="vision-list">
-                        <li>Vitrine de cidadania e respeito</li>
-                        <li>Influência em políticas públicas</li>
-                        <li>Pactos interinstitucionais</li>
-                        <li>Audiências públicas temáticas</li>
-                        <li>Inspiração para organizações privadas</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="definition-box fade-in" style="margin-top: 60px;">
-                <p class="definition-text">
-                    "Há um ganho transversal para todas as esferas: <span class="definition-highlight">redução de ouvidorias e judicialização</span>, fortalecimento da reputação institucional, melhora do clima de trabalho e padronização de práticas entre unidades. Em um tempo em que confiança é um ativo raro, um Estado que acolhe melhor as pessoas 60+ comunica maturidade, responsabilidade e compromisso com o que mais importa: a <span class="definition-highlight">dignidade humana</span> no cotidiano dos serviços."
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- What is Ambiente 60+ -->
-    <section class="what-is" id="what-is">
-        <div class="container">
-            <div class="section-header fade-in">
-                <span class="section-tag">Conceito</span>
-                <h2 class="section-title">O Que é um Ambiente 60+?</h2>
-                <p class="section-subtitle">
-                    Muito mais que adaptações físicas. Uma cultura organizacional transformada.
-                </p>
-            </div>
-
-            <div class="definition-box fade-in">
-                <p class="definition-text">
-                    "Um <span class="definition-highlight">Ambiente 60+</span> é aquele que reconhece a pessoa longeva como 
-                    <span class="definition-highlight">sujeito de direitos, autonomia e valor social</span>. 
-                    É um espaço onde cidadania, respeito e empatia se manifestam em cada interação, 
-                    processo e decisão — do atendimento ao público às relações internas de trabalho. 
-                    É a <span class="definition-highlight">longevidade ativa, produtiva e cidadã</span> 
-                    integrada à estratégia institucional."
-                </p>
-            </div>
-
-            <div class="pillars-grid">
-                <div class="pillar-card fade-in">
-                    <div class="pillar-icon">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <h3 class="pillar-title">Acolhimento Respeitoso</h3>
-                    <p class="pillar-text">
-                        Desde o primeiro contato, linguagem cordial, escuta sem pressa e orientação clara.
-                    </p>
-                </div>
-                <div class="pillar-card fade-in">
-                    <div class="pillar-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3 class="pillar-title">Comunicação Acessível</h3>
-                    <p class="pillar-text">
-                        Informações compreensíveis, sem jargões, com tempo para entendimento e perguntas.
-                    </p>
-                </div>
-                <div class="pillar-card fade-in">
-                    <div class="pillar-icon">
-                        <i class="fas fa-user-check"></i>
-                    </div>
-                    <h3 class="pillar-title">Autonomia Preservada</h3>
-                    <p class="pillar-text">
-                        A pessoa longeva decide por si. Acompanhante apoia, não substitui a voz do cidadão.
-                    </p>
-                </div>
-                <div class="pillar-card fade-in">
-                    <div class="pillar-icon">
-                        <i class="fas fa-ban"></i>
-                    </div>
-                    <h3 class="pillar-title">Combate ao Idadismo</h3>
-                    <p class="pillar-text">
-                        Zero tolerância com estereótipos, infantilização ou discriminação por idade.
-                    </p>
-                </div>
-                <div class="pillar-card fade-in">
-                    <div class="pillar-icon">
-                        <i class="fas fa-laptop"></i>
-                    </div>
-                    <h3 class="pillar-title">Tecnologia Inclusiva</h3>
-                    <p class="pillar-text">
-                        Digitalização que facilita, não exclui. Apoio humano sempre disponível.
-                    </p>
-                </div>
-                <div class="pillar-card fade-in">
-                    <div class="pillar-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="pillar-title">Privacidade e Dignidade</h3>
-                    <p class="pillar-text">
-                        Dados protegidos, situações sensíveis tratadas com discrição e respeito.
-                    </p>
                 </div>
             </div>
         </div>
@@ -1880,10 +2044,7 @@
                 <div class="process-step fade-in">
                     <div class="step-content">
                         <h3 class="step-title">1. Adesão à Carta de Princípios</h3>
-                        <p class="step-text">
-                            A instituição assume publicamente os 15 princípios universais, 
-                            demonstrando compromisso com a transformação cultural necessária.
-                        </p>
+                        <p class="step-text">A instituição assume publicamente os 15 princípios universais.</p>
                     </div>
                     <div class="step-number">1</div>
                 </div>
@@ -1891,10 +2052,7 @@
                 <div class="process-step fade-in">
                     <div class="step-content">
                         <h3 class="step-title">2. Sensibilização Interna</h3>
-                        <p class="step-text">
-                            Lideranças e equipes são engajadas no propósito do selo. 
-                            Compreensão do "porquê" antes do "como".
-                        </p>
+                        <p class="step-text">Lideranças e equipes são engajadas no propósito do selo.</p>
                     </div>
                     <div class="step-number">2</div>
                 </div>
@@ -1902,10 +2060,7 @@
                 <div class="process-step fade-in">
                     <div class="step-content">
                         <h3 class="step-title">3. Implementação das Diretrizes Setoriais</h3>
-                        <p class="step-text">
-                            Aplicação das normas específicas do seu setor 
-                            (alimentação, varejo, saúde, público, etc.).
-                        </p>
+                        <p class="step-text">Aplicação das normas específicas do seu setor.</p>
                     </div>
                     <div class="step-number">3</div>
                 </div>
@@ -1913,10 +2068,7 @@
                 <div class="process-step fade-in">
                     <div class="step-content">
                         <h3 class="step-title">4. Diagnóstico de Conformidade</h3>
-                        <p class="step-text">
-                            Avaliação detalhada da situação atual, identificando 
-                            gaps e oportunidades de melhoria.
-                        </p>
+                        <p class="step-text">Avaliação detalhada da situação atual, identificando gaps.</p>
                     </div>
                     <div class="step-number">4</div>
                 </div>
@@ -1924,10 +2076,7 @@
                 <div class="process-step fade-in">
                     <div class="step-content">
                         <h3 class="step-title">5. Treinamentos Especializados</h3>
-                        <p class="step-text">
-                            Capacitação nas Diretrizes Setoriais e nos 15 Princípios 
-                            para todas as equipes envolvidas.
-                        </p>
+                        <p class="step-text">Capacitação nas Diretrizes e nos 15 Princípios.</p>
                     </div>
                     <div class="step-number">5</div>
                 </div>
@@ -1935,10 +2084,7 @@
                 <div class="process-step fade-in">
                     <div class="step-content">
                         <h3 class="step-title">6. Ajustes e Adaptações</h3>
-                        <p class="step-text">
-                            Modificações em processos, estruturas e modelos de negócio 
-                            para plena conformidade com o selo.
-                        </p>
+                        <p class="step-text">Modificações em processos e estruturas para conformidade.</p>
                     </div>
                     <div class="step-number">6</div>
                 </div>
@@ -1946,10 +2092,7 @@
                 <div class="process-step fade-in">
                     <div class="step-content">
                         <h3 class="step-title">7. Lançamento Local do Selo</h3>
-                        <p class="step-text">
-                            Cerimônia de certificação e comunicação ao mercado. 
-                            Início da jornada de melhoria contínua.
-                        </p>
+                        <p class="step-text">Cerimônia de certificação e comunicação ao mercado.</p>
                     </div>
                     <div class="step-number">7</div>
                 </div>
@@ -1957,80 +2100,82 @@
         </div>
     </section>
 
-    <!-- Sectors -->
+    <!-- 11 Sectors -->
     <section class="sectors" id="sectors">
         <div class="container">
             <div class="section-header fade-in">
                 <span class="section-tag">Abrangência</span>
-                <h2 class="section-title">8 Anexos Setoriais</h2>
+                <h2 class="section-title">11 Anexos Setoriais</h2>
                 <p class="section-subtitle">
                     Diretrizes específicas para diferentes contextos institucionais.
                 </p>
             </div>
             <div class="sectors-grid">
                 <div class="sector-card fade-in">
-                    <div class="sector-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
+                    <div class="sector-icon"><i class="fas fa-utensils"></i></div>
                     <h3 class="sector-title">Anexo 1</h3>
                     <h4 class="sector-title">Bares, Restaurantes e Cafés</h4>
-                    <p class="sector-text">Acolhimento, cardápio acessível, permanência digna, tecnologia inclusiva</p>
+                    <p class="sector-text">Acolhimento, cardápio acessível, permanência digna</p>
                 </div>
                 <div class="sector-card fade-in">
-                    <div class="sector-icon">
-                        <i class="fas fa-shopping-bag"></i>
-                    </div>
+                    <div class="sector-icon"><i class="fas fa-shopping-bag"></i></div>
                     <h3 class="sector-title">Anexo 2</h3>
                     <h4 class="sector-title">Varejo em Geral</h4>
-                    <p class="sector-text">Atendimento, prova de produtos, pagamento respeitoso, pós-venda</p>
+                    <p class="sector-text">Atendimento, prova de produtos, pagamento respeitoso</p>
                 </div>
                 <div class="sector-card fade-in">
-                    <div class="sector-icon">
-                        <i class="fas fa-hotel"></i>
-                    </div>
+                    <div class="sector-icon"><i class="fas fa-hotel"></i></div>
                     <h3 class="sector-title">Anexo 3</h3>
                     <h4 class="sector-title">Hospedagem</h4>
-                    <p class="sector-text">Check-in, circulação, serviços internos, segurança</p>
+                    <p class="sector-text">Check-in, circulação, serviços internos</p>
                 </div>
                 <div class="sector-card fade-in">
-                    <div class="sector-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
+                    <div class="sector-icon"><i class="fas fa-university"></i></div>
                     <h3 class="sector-title">Anexo 4</h3>
                     <h4 class="sector-title">Financeiro e Seguros</h4>
-                    <p class="sector-text">Contratos, prevenção de fraudes, privacidade, sigilo bancário</p>
+                    <p class="sector-text">Contratos, prevenção de fraudes, privacidade</p>
                 </div>
                 <div class="sector-card fade-in">
-                    <div class="sector-icon">
-                        <i class="fas fa-hospital"></i>
-                    </div>
+                    <div class="sector-icon"><i class="fas fa-hospital"></i></div>
                     <h3 class="sector-title">Anexo 5</h3>
                     <h4 class="sector-title">Saúde</h4>
-                    <p class="sector-text">Acolhimento, exames, privacidade em saúde, cuidado digno</p>
+                    <p class="sector-text">Acolhimento, exames, privacidade em saúde</p>
                 </div>
                 <div class="sector-card fade-in">
-                    <div class="sector-icon">
-                        <i class="fas fa-theater-masks"></i>
-                    </div>
+                    <div class="sector-icon"><i class="fas fa-theater-masks"></i></div>
                     <h3 class="sector-title">Anexo 6</h3>
                     <h4 class="sector-title">Cultural e Lazer</h4>
-                    <p class="sector-text">Participação, convivência, atividades, protagonismo</p>
+                    <p class="sector-text">Participação, convivência, atividades</p>
                 </div>
                 <div class="sector-card fade-in">
-                    <div class="sector-icon">
-                        <i class="fas fa-landmark"></i>
-                    </div>
+                    <div class="sector-icon"><i class="fas fa-landmark"></i></div>
                     <h3 class="sector-title">Anexo 7</h3>
                     <h4 class="sector-title">Gestão Pública</h4>
-                    <p class="sector-text">Serviços, direitos, cidadania ativa, Executivo/Judiciário/Legislativo</p>
+                    <p class="sector-text">Serviços, direitos, cidadania ativa</p>
                 </div>
                 <div class="sector-card fade-in">
-                    <div class="sector-icon">
-                        <i class="fas fa-bus"></i>
-                    </div>
+                    <div class="sector-icon"><i class="fas fa-bus"></i></div>
                     <h3 class="sector-title">Anexo 8</h3>
                     <h4 class="sector-title">Mobilidade e Turismo</h4>
-                    <p class="sector-text">Embarque, segurança, jornada digna, transporte</p>
+                    <p class="sector-text">Embarque, segurança, jornada digna</p>
+                </div>
+                <div class="sector-card fade-in">
+                    <div class="sector-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 class="sector-title">Anexo 9</h3>
+                    <h4 class="sector-title">Educação e Formação</h4>
+                    <p class="sector-text">Escolas, cursos, universidades, aprendizagem ao longo da vida</p>
+                </div>
+                <div class="sector-card fade-in">
+                    <div class="sector-icon"><i class="fas fa-tools"></i></div>
+                    <h3 class="sector-title">Anexo 10</h3>
+                    <h4 class="sector-title">Empresas de Serviços</h4>
+                    <p class="sector-text">Telecom, energia, assistência técnica, SAC</p>
+                </div>
+                <div class="sector-card fade-in">
+                    <div class="sector-icon"><i class="fas fa-industry"></i></div>
+                    <h3 class="sector-title">Anexo 11</h3>
+                    <h4 class="sector-title">Indústria</h4>
+                    <p class="sector-text">Produtos, rotulagem, SAC, pós-venda, garantia</p>
                 </div>
             </div>
         </div>
@@ -2040,11 +2185,6 @@
     <section class="animo" id="animo">
         <div class="container">
             <div class="animo-content">
-                <div class="animo-image fade-in">
-                    <!-- ⚠️ RICARDO: SUBSTITUA O CAMINHO ABAIXO PELA SUA FOTO REAL ⚠️ -->
-                    <!-- Salve sua foto como: ricardo-animo.jpg na pasta /assets/images/ -->
-                    <img src="assets/images/ricardo-animo.jpg" alt="Ricardo de Faria Barros - Psicólogo, Logoterapeuta e Criador do Selo Ambiente 60+">
-                </div>
                 <div class="animo-text fade-in">
                     <h3>Ânimo Desenvolvimento Humano</h3>
                     <p>
@@ -2071,6 +2211,30 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Message -->
+    <section class="final-message">
+        <div class="container">
+            <div class="message-box fade-in">
+                <h3>Atender Bem um Idoso Não é Gentileza</h3>
+                <p>
+                    Valorizar os longevos não é <strong>caridade</strong> nem <strong>politicamente correto</strong> – 
+                    é a <strong>estratégia de negócio mais inteligente</strong> para as próximas décadas.
+                </p>
+                <p>
+                    O octogenário de hoje não é o "velhinho coitado" de antigamente. Ele é ativo, consciente, 
+                    exigente, com recursos e influenciador.
+                </p>
+                <p>
+                    Quem não enxergar isso vai simplesmente <strong>ficar para trás</strong>, servindo um mercado 
+                    cada vez menor, enquanto os concorrentes atendem o mercado que mais cresce no planeta.
+                </p>
+                <p class="message-highlight">
+                    Atender bem um idoso é investimento com retorno garantido. 🌟
+                </p>
             </div>
         </div>
     </section>
@@ -2106,7 +2270,7 @@
                     <p>Uma iniciativa de referência para promover ambientes institucionais mais respeitosos, acessíveis, acolhedores e inclusivos para a pessoa longeva.</p>
                 </div>
                 <div class="footer-column">
-                    <h4>8 Anexos Setoriais</h4>
+                    <h4>11 Anexos Setoriais</h4>
                     <a href="#sectors">Alimentação</a>
                     <a href="#sectors">Varejo</a>
                     <a href="#sectors">Hospedagem</a>
@@ -2115,6 +2279,9 @@
                     <a href="#sectors">Cultural e Lazer</a>
                     <a href="#sectors">Gestão Pública</a>
                     <a href="#sectors">Mobilidade e Turismo</a>
+                    <a href="#sectors">Educação</a>
+                    <a href="#sectors">Serviços</a>
+                    <a href="#sectors">Indústria</a>
                 </div>
                 <div class="footer-column">
                     <h4>Ânimo Desenvolvimento Humano</h4>
@@ -2124,9 +2291,9 @@
                 </div>
                 <div class="footer-column">
                     <h4>Documentação</h4>
-                    <a href="#">Carta de 15 Princípios</a>
-                    <a href="#">Anexos Setoriais (1-8)</a>
-                    <a href="#">Checklists de Conformidade</a>
+                    <a href="#principles">Carta de 15 Princípios</a>
+                    <a href="#sectors">Anexos Setoriais (1-11)</a>
+                    <a href="#process">Checklists de Conformidade</a>
                     <a href="#">Política de Privacidade</a>
                 </div>
             </div>
@@ -2158,6 +2325,13 @@
         // Mobile Menu Toggle
         document.getElementById('navbarToggle').addEventListener('click', () => {
             document.getElementById('navbarMenu').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.navbar-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navbarMenu').classList.remove('active');
+            });
         });
 
         // Tab Functionality
@@ -2196,8 +2370,6 @@
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    // Close mobile menu if open
-                    document.getElementById('navbarMenu').classList.remove('active');
                 }
             });
         });
