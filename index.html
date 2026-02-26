@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selo Ambiente 60+: Cidadania, Respeito e Empatia - Uma iniciativa de referência para promover ambientes institucionais mais respeitosos, acessíveis e inclusivos para a pessoa longeva.">
     <title>Selo Ambiente 60+ | Cidadania, Respeito e Empatia</title>
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         :root {
-            /* Cores extraídas do logo original */
+            /* Cores extraídas do logo do Selo */
             --primary-green: #2d6a4f;
             --secondary-green: #40916c;
             --light-green: #52b788;
@@ -19,8 +23,9 @@
             --sky-blue: #457b9d;
             --light-cream: #f8f9fa;
             --text-dark: #2b2d42;
+            --white: #ffffff;
             
-            /* Gradientes baseados no logo */
+            /* Gradientes */
             --gradient-seal: linear-gradient(135deg, #2d6a4f 0%, #40916c 50%, #52b788 100%);
             --gradient-border: linear-gradient(135deg, #d4a373 0%, #e9c46a 50%, #f4a261 100%);
             --gradient-sky: linear-gradient(135deg, #1d3557 0%, #457b9d 50%, #68a0b3 100%);
@@ -40,6 +45,7 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 80px;
         }
 
         body {
@@ -56,29 +62,63 @@
             padding: 0 20px;
         }
 
-        /* ===== SVG LOGO STYLES ===== */
-        .seal-svg-container {
-            width: 280px;
-            height: 280px;
-            margin: 0 auto 40px;
-            animation: pulse 3s infinite;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+        /* ===== NAVIGATION ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: var(--shadow-soft);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
         }
 
-        .seal-svg-container:hover {
-            animation: none;
-            transform: scale(1.05);
+        .navbar.scrolled {
+            padding: 10px 0;
+            background: rgba(255,255,255,0.98);
         }
 
-        @keyframes pulse {
-            0%, 100% { 
-                transform: scale(1); 
-                filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
-            }
-            50% { 
-                transform: scale(1.05); 
-                filter: drop-shadow(0 15px 30px rgba(0,0,0,0.3));
-            }
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            text-decoration: none;
+        }
+
+        .navbar-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .navbar-menu a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-menu a:hover {
+            color: var(--primary-green);
+        }
+
+        .navbar-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            cursor: pointer;
         }
 
         /* ===== HERO SECTION ===== */
@@ -90,6 +130,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            padding-top: 80px;
         }
 
         .hero::before {
@@ -112,7 +153,7 @@
 
         .hero-content {
             text-align: center;
-            color: white;
+            color: var(--white);
             z-index: 2;
             padding: 40px 20px;
             max-width: 1200px;
@@ -122,7 +163,7 @@
             width: 280px;
             height: 280px;
             margin: 0 auto 40px;
-            background: white;
+            background: var(--white);
             border-radius: 50%;
             padding: 15px;
             box-shadow: var(--shadow-strong);
@@ -131,16 +172,20 @@
             border: 4px solid var(--accent-gold);
         }
 
-        .seal-logo img {
+        .seal-logo svg {
             width: 100%;
             height: 100%;
-            object-fit: contain;
-            border-radius: 50%;
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0.7); }
-            50% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(255,255,255,0); }
+            0%, 100% { 
+                transform: scale(1); 
+                box-shadow: 0 0 0 0 rgba(255,255,255,0.7); 
+            }
+            50% { 
+                transform: scale(1.05); 
+                box-shadow: 0 0 0 20px rgba(255,255,255,0); 
+            }
         }
 
         .hero h1 {
@@ -196,7 +241,7 @@
         }
 
         .btn-primary {
-            background: white;
+            background: var(--white);
             color: var(--primary-green);
             box-shadow: var(--shadow-soft);
         }
@@ -208,12 +253,12 @@
 
         .btn-secondary {
             background: transparent;
-            color: white;
-            border: 2px solid white;
+            color: var(--white);
+            border: 2px solid var(--white);
         }
 
         .btn-secondary:hover {
-            background: white;
+            background: var(--white);
             color: var(--primary-green);
         }
 
@@ -222,13 +267,31 @@
             bottom: 40px;
             left: 50%;
             transform: translateX(-50%);
-            color: white;
+            color: var(--white);
             animation: bounce 2s infinite;
         }
 
         @keyframes bounce {
             0%, 100% { transform: translateX(-50%) translateY(0); }
             50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        .impact-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .impact-badge {
+            background: rgba(255,255,255,0.15);
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
         }
 
         /* ===== SECTION STYLES ===== */
@@ -245,7 +308,7 @@
             display: inline-block;
             padding: 8px 20px;
             background: var(--gradient-seal);
-            color: white;
+            color: var(--white);
             border-radius: 50px;
             font-size: 0.9rem;
             font-weight: 600;
@@ -272,7 +335,7 @@
 
         /* ===== LONGEVITY ECONOMY ===== */
         .longevity-economy {
-            background: white;
+            background: var(--white);
         }
 
         .stats-grid {
@@ -339,7 +402,7 @@
         /* ===== WHY ADHERE ===== */
         .why-adhere {
             background: var(--gradient-sky);
-            color: white;
+            color: var(--white);
             position: relative;
             overflow: hidden;
         }
@@ -351,12 +414,12 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.05)"/></svg>');
+            background: url("image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='1' fill='rgba(255,255,255,0.05)'/%3E%3C/svg%3E");
             background-size: 30px 30px;
         }
 
         .why-adhere .section-title {
-            color: white;
+            color: var(--white);
         }
 
         .why-adhere .section-subtitle {
@@ -377,7 +440,7 @@
             padding: 15px 35px;
             background: rgba(255,255,255,0.1);
             border: 2px solid rgba(255,255,255,0.3);
-            color: white;
+            color: var(--white);
             border-radius: 50px;
             font-size: 1.1rem;
             font-weight: 600;
@@ -388,9 +451,9 @@
 
         .tab-btn.active,
         .tab-btn:hover {
-            background: white;
+            background: var(--white);
             color: var(--deep-blue);
-            border-color: white;
+            border-color: var(--white);
             transform: translateY(-2px);
         }
 
@@ -434,7 +497,7 @@
         .benefit-icon {
             width: 70px;
             height: 70px;
-            background: white;
+            background: var(--white);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -449,7 +512,7 @@
             font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 15px;
-            color: white;
+            color: var(--white);
         }
 
         .benefit-text {
@@ -465,7 +528,7 @@
 
         /* ===== PUBLIC SECTOR VISION ===== */
         .public-vision {
-            background: white;
+            background: var(--white);
         }
 
         .vision-grid {
@@ -566,7 +629,7 @@
 
         .definition-box {
             background: var(--gradient-seal);
-            color: white;
+            color: var(--white);
             padding: 60px;
             border-radius: 30px;
             text-align: center;
@@ -601,7 +664,7 @@
         .pillar-card {
             text-align: center;
             padding: 40px 30px;
-            background: white;
+            background: var(--white);
             border-radius: 20px;
             transition: all 0.3s ease;
             box-shadow: var(--shadow-soft);
@@ -637,91 +700,9 @@
             line-height: 1.6;
         }
 
-        /* ===== PROCESS ===== */
-        .process {
-            background: white;
-        }
-
-        .process-timeline {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 0;
-        }
-
-        .process-timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 100%;
-            background: var(--gradient-border);
-            border-radius: 2px;
-        }
-
-        .process-step {
-            display: flex;
-            align-items: center;
-            margin-bottom: 60px;
-            position: relative;
-        }
-
-        .process-step:nth-child(odd) {
-            flex-direction: row;
-        }
-
-        .process-step:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .step-content {
-            width: 45%;
-            padding: 35px;
-            background: var(--light-cream);
-            border-radius: 20px;
-            box-shadow: var(--shadow-soft);
-            position: relative;
-            z-index: 2;
-            border-left: 4px solid var(--primary-green);
-        }
-
-        .step-number {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-seal);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            z-index: 3;
-            box-shadow: 0 0 0 8px white, var(--shadow-soft);
-            border: 3px solid var(--accent-gold);
-        }
-
-        .step-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--primary-green);
-            margin-bottom: 15px;
-        }
-
-        .step-text {
-            font-size: 1rem;
-            color: var(--text-dark);
-            opacity: 0.85;
-            line-height: 1.7;
-        }
-
-        /* ===== PRINCIPLES ===== */
+        /* ===== 15 PRINCIPLES ===== */
         .principles {
-            background: var(--light-cream);
+            background: var(--white);
         }
 
         .principles-grid {
@@ -731,7 +712,7 @@
         }
 
         .principle-card {
-            background: white;
+            background: var(--light-cream);
             padding: 30px;
             border-radius: 15px;
             border-left: 4px solid var(--primary-green);
@@ -780,10 +761,92 @@
             line-height: 1.6;
         }
 
+        /* ===== PROCESS ===== */
+        .process {
+            background: var(--light-cream);
+        }
+
+        .process-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-border);
+            border-radius: 2px;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .process-step:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .process-step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .step-content {
+            width: 45%;
+            padding: 35px;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            z-index: 2;
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .step-number {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-seal);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            z-index: 3;
+            box-shadow: 0 0 0 8px var(--light-cream), var(--shadow-soft);
+            border: 3px solid var(--accent-gold);
+        }
+
+        .step-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+
+        .step-text {
+            font-size: 1rem;
+            color: var(--text-dark);
+            opacity: 0.85;
+            line-height: 1.7;
+        }
+
         /* ===== SECTORS ===== */
         .sectors {
             background: var(--gradient-seal);
-            color: white;
+            color: var(--white);
             position: relative;
             overflow: hidden;
         }
@@ -799,7 +862,7 @@
         }
 
         .sectors .section-title {
-            color: white;
+            color: var(--white);
         }
 
         .sectors-grid {
@@ -846,7 +909,7 @@
 
         /* ===== ANIMO ===== */
         .animo {
-            background: white;
+            background: var(--white);
         }
 
         .animo-content {
@@ -862,21 +925,42 @@
 
         .animo-image img {
             width: 100%;
+            max-width: 500px;
             border-radius: 20px;
             box-shadow: var(--shadow-strong);
             border: 4px solid var(--accent-gold);
+            object-fit: cover;
+            object-position: center top;
         }
 
         .animo-image::before {
             content: '';
             position: absolute;
-            top: -10px;
-            left: -10px;
-            right: 10px;
-            bottom: 10px;
+            top: -15px;
+            left: -15px;
+            right: 15px;
+            bottom: 15px;
             border: 3px solid var(--primary-green);
             border-radius: 20px;
             z-index: -1;
+            opacity: 0.5;
+        }
+
+        .animo-image::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            right: 8px;
+            bottom: 8px;
+            border: 2px solid var(--accent-gold);
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        .animo-image:hover img {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
         }
 
         .animo-text h3 {
@@ -907,19 +991,28 @@
             font-weight: 600;
             color: var(--primary-green);
             font-size: 1.1rem;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .founder-title {
             font-size: 0.95rem;
             color: var(--text-dark);
-            opacity: 0.7;
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+
+        .founder-title i {
+            color: var(--primary-green);
+            width: 20px;
         }
 
         /* ===== CTA SECTION ===== */
         .cta-section {
             background: var(--gradient-warm);
-            color: white;
+            color: var(--white);
             text-align: center;
             padding: 120px 0;
             position: relative;
@@ -937,7 +1030,7 @@
         }
 
         .cta-section .section-title {
-            color: white;
+            color: var(--white);
             margin-bottom: 30px;
             position: relative;
             z-index: 2;
@@ -959,7 +1052,7 @@
         /* ===== FOOTER ===== */
         footer {
             background: var(--deep-blue);
-            color: white;
+            color: var(--white);
             padding: 80px 0 40px;
             position: relative;
         }
@@ -1004,7 +1097,7 @@
             font-size: 0.95rem;
             opacity: 0.8;
             line-height: 1.8;
-            color: white;
+            color: var(--white);
             text-decoration: none;
             display: block;
             margin-bottom: 10px;
@@ -1026,6 +1119,26 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 992px) {
+            .navbar-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow-soft);
+            }
+
+            .navbar-menu.active {
+                display: flex;
+            }
+
+            .navbar-toggle {
+                display: block;
+            }
+
             .process-timeline::before {
                 left: 30px;
             }
@@ -1119,13 +1232,13 @@
 
         .loader-content {
             text-align: center;
-            color: white;
+            color: var(--white);
         }
 
         .loader-seal {
             width: 150px;
             height: 150px;
-            background: white;
+            background: var(--white);
             border-radius: 50%;
             margin: 0 auto 30px;
             animation: rotate 3s infinite linear;
@@ -1139,68 +1252,6 @@
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
-
-        /* ===== IMPACT BADGES ===== */
-        .impact-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            margin-top: 40px;
-        }
-
-        .impact-badge {
-            background: rgba(255,255,255,0.15);
-            padding: 12px 25px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.3);
-        }
-
-        /* ===== DECORATIVE ELEMENTS ===== */
-        .sun-decoration {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background: radial-gradient(circle, #f4a261 0%, #e9c46a 50%, transparent 70%);
-            border-radius: 50%;
-            animation: glow 3s infinite;
-        }
-
-        @keyframes glow {
-            0%, 100% { opacity: 0.5; transform: scale(1); }
-            50% { opacity: 0.8; transform: scale(1.1); }
-        }
-
-        /* ===== LOGO PLACEHOLDER INSTRUCTIONS ===== */
-        .logo-instructions {
-            background: #fff3cd;
-            border: 2px dashed #ffc107;
-            border-radius: 15px;
-            padding: 30px;
-            margin: 40px auto;
-            max-width: 800px;
-            text-align: center;
-        }
-
-        .logo-instructions h4 {
-            color: #856404;
-            margin-bottom: 15px;
-        }
-
-        .logo-instructions p {
-            color: #856404;
-            margin-bottom: 10px;
-        }
-
-        .logo-instructions code {
-            background: #f8f9fa;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-family: monospace;
-        }
     </style>
 </head>
 <body>
@@ -1208,30 +1259,39 @@
     <div class="loader" id="loader">
         <div class="loader-content">
             <div class="loader-seal">
-                <!-- SVG Logo Placeholder -->
                 <svg viewBox="0 0 100 100" width="100" height="100">
                     <circle cx="50" cy="50" r="48" fill="#2d6a4f" stroke="#d4a373" stroke-width="3"/>
-                    <circle cx="50" cy="50" r="40" fill="white"/>
-                    <text x="50" y="35" text-anchor="middle" font-size="8" fill="#2d6a4f" font-weight="bold">AMBIENTE</text>
-                    <text x="50" y="45" text-anchor="middle" font-size="10" fill="#2d6a4f" font-weight="bold">60+</text>
-                    <circle cx="50" cy="60" r="15" fill="#40916c"/>
-                    <path d="M50 45 L50 55 M45 50 L55 50" stroke="#f4a261" stroke-width="2"/>
+                    <text x="50" y="55" text-anchor="middle" font-size="20" fill="#2d6a4f" font-weight="bold">60+</text>
                 </svg>
             </div>
             <p>Carregando experiência...</p>
         </div>
     </div>
 
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-content">
+            <a href="#home" class="navbar-logo">Ambiente 60+</a>
+            <button class="navbar-toggle" id="navbarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#why-adhere">Por Que Aderir</a></li>
+                <li><a href="#principles">Princípios</a></li>
+                <li><a href="#process">Processo</a></li>
+                <li><a href="#sectors">Setores</a></li>
+                <li><a href="#animo">Ânimo</a></li>
+                <li><a href="#contact" class="btn btn-primary" style="padding: 10px 25px;">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="seal-logo">
-                <!-- INSTRUÇÃO: Substitua este SVG pelo seu arquivo de logo -->
-                <!-- Opção 1: Usar arquivo de imagem -->
-                <!-- <img src="caminho/para/seu-logo-ambiente60.png" alt="Selo Ambiente 60+"> -->
-                
-                <!-- Opção 2: Usar SVG inline (recomendado para qualidade) -->
-                <svg class="seal-svg-container" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
                     <!-- Outer Ring - Green -->
                     <circle cx="200" cy="200" r="195" fill="#2d6a4f" stroke="#d4a373" stroke-width="8"/>
                     <circle cx="200" cy="200" r="185" fill="#2d6a4f"/>
@@ -1271,7 +1331,7 @@
                     
                     <!-- Bottom Text -->
                     <path id="bottomCurve" d="M 100 200 A 100 100 0 0 0 300 200" fill="none"/>
-                    <text font-size="18" fill="#f8f9fa" font-family="Montserrat">
+                    <text font-size="16" fill="#f8f9fa" font-family="Montserrat">
                         <textPath href="#bottomCurve" startOffset="50%" text-anchor="middle">
                             Cidadania - Respeito - Empatia
                         </textPath>
@@ -1582,9 +1642,6 @@
                     <p class="vision-text">
                         O selo ajuda a organizar o atendimento ao cidadão com foco na dignidade: reduz barreiras invisíveis que afetam especialmente as pessoas 60+, como linguagem burocrática, falta de orientação, instabilidade de fluxos, filas confusas e ambientes pouco acolhedores.
                     </p>
-                    <p class="vision-text">
-                        Quando a jornada do usuário é redesenhada com respeito e empatia, o resultado aparece rápido: menos retrabalho, menos retornos desnecessários, maior compreensão de documentos e etapas.
-                    </p>
                     <ul class="vision-list">
                         <li>Saúde e assistência social</li>
                         <li>Previdência e mobilidade urbana</li>
@@ -1602,9 +1659,6 @@
                     <p class="vision-text">
                         O selo funciona como uma camada de humanização do acesso: balcões, fóruns, varas, juizados, centrais e atendimentos frequentemente colocam o cidadão em situação de ansiedade, insegurança e sensação de "não pertencimento".
                     </p>
-                    <p class="vision-text">
-                        Um padrão institucional de acolhimento e comunicação clara — sem perder rigor técnico — diminui tensão, melhora o entendimento de procedimentos e favorece uma relação mais respeitosa com a Justiça.
-                    </p>
                     <ul class="vision-list">
                         <li>Fóruns e varas especializadas</li>
                         <li>Juizados e centrais de mandados</li>
@@ -1621,9 +1675,6 @@
                     <h3 class="vision-title">Poder Legislativo</h3>
                     <p class="vision-text">
                         O Legislativo tem um papel ainda mais estratégico: além de atender diretamente, ele <strong>emana boas práticas para a sociedade</strong>. Ao aderir ao Selo 60+, câmaras municipais, assembleias legislativas e o Congresso podem se tornar vitrines de cidadania e respeito.
-                    </p>
-                    <p class="vision-text">
-                        O Legislativo pode transformar diretrizes do selo em recomendações, frentes temáticas, agendas, audiências públicas e pactos interinstitucionais, ampliando o alcance do cuidado.
                     </p>
                     <ul class="vision-list">
                         <li>Vitrine de cidadania e respeito</li>
@@ -1911,9 +1962,9 @@
         <div class="container">
             <div class="section-header fade-in">
                 <span class="section-tag">Abrangência</span>
-                <h2 class="section-title">Diretrizes Setoriais</h2>
+                <h2 class="section-title">8 Anexos Setoriais</h2>
                 <p class="section-subtitle">
-                    Oito anexos com normas específicas para diferentes contextos institucionais.
+                    Diretrizes específicas para diferentes contextos institucionais.
                 </p>
             </div>
             <div class="sectors-grid">
@@ -1921,57 +1972,65 @@
                     <div class="sector-icon">
                         <i class="fas fa-utensils"></i>
                     </div>
-                    <h3 class="sector-title">Bares, Restaurantes e Cafés</h3>
-                    <p class="sector-text">Acolhimento, cardápio acessível, permanência digna</p>
+                    <h3 class="sector-title">Anexo 1</h3>
+                    <h4 class="sector-title">Bares, Restaurantes e Cafés</h4>
+                    <p class="sector-text">Acolhimento, cardápio acessível, permanência digna, tecnologia inclusiva</p>
                 </div>
                 <div class="sector-card fade-in">
                     <div class="sector-icon">
                         <i class="fas fa-shopping-bag"></i>
                     </div>
-                    <h3 class="sector-title">Varejo em Geral</h3>
-                    <p class="sector-text">Atendimento, prova de produtos, pagamento respeitoso</p>
+                    <h3 class="sector-title">Anexo 2</h3>
+                    <h4 class="sector-title">Varejo em Geral</h4>
+                    <p class="sector-text">Atendimento, prova de produtos, pagamento respeitoso, pós-venda</p>
                 </div>
                 <div class="sector-card fade-in">
                     <div class="sector-icon">
                         <i class="fas fa-hotel"></i>
                     </div>
-                    <h3 class="sector-title">Hospedagem</h3>
-                    <p class="sector-text">Check-in, circulação, serviços internos</p>
+                    <h3 class="sector-title">Anexo 3</h3>
+                    <h4 class="sector-title">Hospedagem</h4>
+                    <p class="sector-text">Check-in, circulação, serviços internos, segurança</p>
                 </div>
                 <div class="sector-card fade-in">
                     <div class="sector-icon">
                         <i class="fas fa-university"></i>
                     </div>
-                    <h3 class="sector-title">Financeiro e Seguros</h3>
-                    <p class="sector-text">Contratos, prevenção de fraudes, privacidade</p>
+                    <h3 class="sector-title">Anexo 4</h3>
+                    <h4 class="sector-title">Financeiro e Seguros</h4>
+                    <p class="sector-text">Contratos, prevenção de fraudes, privacidade, sigilo bancário</p>
                 </div>
                 <div class="sector-card fade-in">
                     <div class="sector-icon">
                         <i class="fas fa-hospital"></i>
                     </div>
-                    <h3 class="sector-title">Saúde</h3>
-                    <p class="sector-text">Acolhimento, exames, privacidade em saúde</p>
+                    <h3 class="sector-title">Anexo 5</h3>
+                    <h4 class="sector-title">Saúde</h4>
+                    <p class="sector-text">Acolhimento, exames, privacidade em saúde, cuidado digno</p>
                 </div>
                 <div class="sector-card fade-in">
                     <div class="sector-icon">
                         <i class="fas fa-theater-masks"></i>
                     </div>
-                    <h3 class="sector-title">Cultural e Lazer</h3>
-                    <p class="sector-text">Participação, convivência, atividades</p>
+                    <h3 class="sector-title">Anexo 6</h3>
+                    <h4 class="sector-title">Cultural e Lazer</h4>
+                    <p class="sector-text">Participação, convivência, atividades, protagonismo</p>
                 </div>
                 <div class="sector-card fade-in">
                     <div class="sector-icon">
                         <i class="fas fa-landmark"></i>
                     </div>
-                    <h3 class="sector-title">Gestão Pública</h3>
-                    <p class="sector-text">Serviços, direitos, cidadania ativa</p>
+                    <h3 class="sector-title">Anexo 7</h3>
+                    <h4 class="sector-title">Gestão Pública</h4>
+                    <p class="sector-text">Serviços, direitos, cidadania ativa, Executivo/Judiciário/Legislativo</p>
                 </div>
                 <div class="sector-card fade-in">
                     <div class="sector-icon">
                         <i class="fas fa-bus"></i>
                     </div>
-                    <h3 class="sector-title">Mobilidade e Turismo</h3>
-                    <p class="sector-text">Embarque, segurança, jornada digna</p>
+                    <h3 class="sector-title">Anexo 8</h3>
+                    <h4 class="sector-title">Mobilidade e Turismo</h4>
+                    <p class="sector-text">Embarque, segurança, jornada digna, transporte</p>
                 </div>
             </div>
         </div>
@@ -1982,14 +2041,17 @@
         <div class="container">
             <div class="animo-content">
                 <div class="animo-image fade-in">
-                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600" alt="Equipe Ânimo">
+                    <!-- ⚠️ RICARDO: SUBSTITUA O CAMINHO ABAIXO PELA SUA FOTO REAL ⚠️ -->
+                    <!-- Salve sua foto como: ricardo-animo.jpg na pasta /assets/images/ -->
+                    <img src="assets/images/ricardo-animo.jpg" alt="Ricardo de Faria Barros - Psicólogo, Logoterapeuta e Criador do Selo Ambiente 60+">
                 </div>
                 <div class="animo-text fade-in">
                     <h3>Ânimo Desenvolvimento Humano</h3>
                     <p>
-                        Gestora e criadora do Selo Ambiente 60+, a Ânimo Desenvolvimento Humano 
-                        dedica-se ao desenvolvimento de soluções formativas, conteúdos e metodologias 
-                        de apoio para transformação cultural nas organizações.
+                        Gestora e criadora do Selo Ambiente 60+: Cidadania, Respeito e Empatia, 
+                        a Ânimo Desenvolvimento Humano dedica-se ao desenvolvimento de soluções 
+                        formativas, conteúdos e metodologias de apoio para transformação cultural 
+                        nas organizações.
                     </p>
                     <p>
                         Com foco no alinhamento institucional e das equipes aos preceitos do selo, 
@@ -1997,11 +2059,15 @@
                         sustentáveis e genuínas.
                     </p>
                     <div class="founder-info">
-                        <div class="founder-name">Ricardo de Faria Barros</div>
+                        <div class="founder-name">
+                            <i class="fas fa-user-circle"></i> Ricardo de Faria Barros
+                        </div>
                         <div class="founder-title">
-                            Psicólogo • Logoterapeuta • Consultor de Longevidade<br>
-                            Mestre em Gestão Social e Trabalho<br>
-                            Autor do site Plena Longevidade
+                            <i class="fas fa-brain"></i> Psicólogo • Logoterapeuta<br>
+                            <i class="fas fa-user-graduate"></i> Mestre em Gestão Social e Trabalho<br>
+                            <i class="fas fa-clock"></i> Consultor de Longevidade (Projeto 70+ ANABB)<br>
+                            <i class="fas fa-globe"></i> Autor do site Plena Longevidade<br>
+                            <i class="fas fa-envelope"></i> ricardo@animodh.com.br
                         </div>
                     </div>
                 </div>
@@ -2010,7 +2076,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="cta-section" id="contact">
         <div class="container">
             <h2 class="section-title">Sua Instituição Está Pronta para Esta Transformação?</h2>
             <p class="section-subtitle">
@@ -2040,32 +2106,33 @@
                     <p>Uma iniciativa de referência para promover ambientes institucionais mais respeitosos, acessíveis, acolhedores e inclusivos para a pessoa longeva.</p>
                 </div>
                 <div class="footer-column">
-                    <h4>Setores Atendidos</h4>
-                    <a href="#">Alimentação</a>
-                    <a href="#">Varejo</a>
-                    <a href="#">Hospedagem</a>
-                    <a href="#">Financeiro</a>
-                    <a href="#">Saúde</a>
-                    <a href="#">Cultural e Lazer</a>
-                    <a href="#">Gestão Pública</a>
-                    <a href="#">Mobilidade e Turismo</a>
+                    <h4>8 Anexos Setoriais</h4>
+                    <a href="#sectors">Alimentação</a>
+                    <a href="#sectors">Varejo</a>
+                    <a href="#sectors">Hospedagem</a>
+                    <a href="#sectors">Financeiro</a>
+                    <a href="#sectors">Saúde</a>
+                    <a href="#sectors">Cultural e Lazer</a>
+                    <a href="#sectors">Gestão Pública</a>
+                    <a href="#sectors">Mobilidade e Turismo</a>
                 </div>
                 <div class="footer-column">
                     <h4>Ânimo Desenvolvimento Humano</h4>
                     <p>Ricardo de Faria Barros</p>
-                    <p>ricardo@animodh.com.br</p>
-                    <p>www.plenalongevidade.com.br</p>
+                    <p><i class="fas fa-envelope"></i> ricardo@animodh.com.br</p>
+                    <p><i class="fas fa-globe"></i> www.plenalongevidade.com.br</p>
                 </div>
                 <div class="footer-column">
                     <h4>Documentação</h4>
-                    <a href="#">Carta de Princípios</a>
-                    <a href="#">Anexos Setoriais</a>
+                    <a href="#">Carta de 15 Princípios</a>
+                    <a href="#">Anexos Setoriais (1-8)</a>
                     <a href="#">Checklists de Conformidade</a>
                     <a href="#">Política de Privacidade</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Ânimo Desenvolvimento Humano. Todos os direitos reservados. | Selo Ambiente 60+: Cidadania, Respeito e Empatia</p>
+                <p>&copy; 2026 Ânimo Desenvolvimento Humano - Ricardo de Faria Barros. Todos os direitos reservados.</p>
+                <p>Selo Ambiente 60+: Cidadania, Respeito e Empatia</p>
             </div>
         </div>
     </footer>
@@ -2076,6 +2143,21 @@
             setTimeout(() => {
                 document.getElementById('loader').classList.add('hidden');
             }, 1500);
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('navbarToggle').addEventListener('click', () => {
+            document.getElementById('navbarMenu').classList.toggle('active');
         });
 
         // Tab Functionality
@@ -2114,6 +2196,8 @@
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Close mobile menu if open
+                    document.getElementById('navbarMenu').classList.remove('active');
                 }
             });
         });
