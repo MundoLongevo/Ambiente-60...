@@ -116,7 +116,7 @@
             cursor: pointer;
         }
 
-        /* ===== HERO SECTION ANIMADA ===== */
+        /* ===== HERO SECTION ===== */
         .hero {
             min-height: 100vh;
             background: var(--gradient-hero);
@@ -546,6 +546,17 @@
             color: var(--primary-green);
         }
 
+        .btn-ebook {
+            background: var(--gradient-warm);
+            color: var(--white);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .btn-ebook:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-strong);
+        }
+
         .scroll-indicator {
             position: absolute;
             bottom: 40px;
@@ -627,6 +638,422 @@
             max-width: 800px;
             margin: 0 auto;
             opacity: 0.8;
+        }
+
+        /* ===== EBOOK SECTION ===== */
+        .ebook-section {
+            background: var(--gradient-warm);
+            color: var(--white);
+            padding: 80px 0;
+        }
+
+        .ebook-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .ebook-image {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .ebook-image i {
+            font-size: 5rem;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .ebook-image h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .ebook-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .ebook-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .ebook-benefits {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .ebook-benefits li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1rem;
+        }
+
+        .ebook-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        /* ===== QUIZ SECTION ===== */
+        .quiz-section {
+            background: var(--white);
+            padding: 100px 0;
+        }
+
+        .quiz-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--light-cream);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-strong);
+        }
+
+        .quiz-question {
+            margin-bottom: 30px;
+        }
+
+        .quiz-question h4 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-green);
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .quiz-option {
+            padding: 15px 20px;
+            background: var(--white);
+            border: 2px solid var(--light-cream);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .quiz-option:hover {
+            border-color: var(--primary-green);
+            background: rgba(45, 106, 79, 0.05);
+        }
+
+        .quiz-option.selected {
+            border-color: var(--primary-green);
+            background: var(--primary-green);
+            color: var(--white);
+        }
+
+        .quiz-result {
+            text-align: center;
+            padding: 40px;
+            background: var(--gradient-seal);
+            color: var(--white);
+            border-radius: 20px;
+            display: none;
+        }
+
+        .quiz-result h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .quiz-result p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .quiz-progress {
+            margin-bottom: 30px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: var(--light-cream);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--gradient-seal);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* ===== CALCULATOR SECTION ===== */
+        .calculator-section {
+            background: var(--light-cream);
+            padding: 100px 0;
+        }
+
+        .calculator-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-strong);
+        }
+
+        .calculator-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+
+        .form-group select,
+        .form-group input {
+            padding: 15px;
+            border: 2px solid var(--light-cream);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .form-group select:focus,
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-green);
+        }
+
+        .calculator-result {
+            text-align: center;
+            padding: 40px;
+            background: var(--gradient-seal);
+            color: var(--white);
+            border-radius: 20px;
+            display: none;
+        }
+
+        .calculator-result h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .calculator-result .value {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--warm-orange);
+            margin-bottom: 20px;
+        }
+
+        /* ===== JOURNEY INFOGRAPHIC ===== */
+        .journey-section {
+            background: var(--white);
+            padding: 100px 0;
+        }
+
+        .journey-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .journey-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-border);
+            border-radius: 2px;
+        }
+
+        .journey-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .journey-step:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .journey-step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .journey-content {
+            width: 45%;
+            padding: 35px;
+            background: var(--light-cream);
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            z-index: 2;
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .journey-number {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-seal);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            z-index: 3;
+            box-shadow: 0 0 0 8px var(--light-cream), var(--shadow-soft);
+            border: 3px solid var(--accent-gold);
+        }
+
+        .journey-content h4 {
+            font-size: 1.3rem;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+
+        .journey-content p {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            opacity: 0.85;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .journey-principle {
+            background: var(--white);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent-gold);
+        }
+
+        .journey-principle strong {
+            color: var(--primary-green);
+        }
+
+        /* ===== BEFORE AFTER SECTION ===== */
+        .before-after-section {
+            background: var(--light-cream);
+            padding: 100px 0;
+        }
+
+        .before-after-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .before-after-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .before-after-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: var(--gradient-seal);
+            color: var(--white);
+        }
+
+        .before-after-header .before {
+            padding: 20px;
+            text-align: center;
+            background: rgba(231, 111, 81, 0.3);
+        }
+
+        .before-after-header .after {
+            padding: 20px;
+            text-align: center;
+            background: rgba(82, 183, 136, 0.3);
+        }
+
+        .before-after-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .before-after-body .before,
+        .before-after-body .after {
+            padding: 30px;
+        }
+
+        .before-after-body .before {
+            background: #fef2f2;
+            border-right: 2px solid var(--light-cream);
+        }
+
+        .before-after-body .after {
+            background: #f0fdf4;
+        }
+
+        .before-after-body h5 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .before-after-body .before h5 {
+            color: #dc2626;
+        }
+
+        .before-after-body .after h5 {
+            color: var(--primary-green);
+        }
+
+        .before-after-body p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .before-after-body .before p {
+            color: #dc2626;
+        }
+
+        .before-after-body .after p {
+            color: var(--primary-green);
+        }
+
+        .before-after-body .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .before-after-body .before .icon {
+            color: #dc2626;
+        }
+
+        .before-after-body .after .icon {
+            color: var(--primary-green);
         }
 
         /* ===== KPI SECTION ===== */
@@ -1297,6 +1724,32 @@
                 display: block;
             }
 
+            .ebook-container {
+                grid-template-columns: 1fr;
+            }
+
+            .calculator-form {
+                grid-template-columns: 1fr;
+            }
+
+            .journey-timeline::before {
+                left: 30px;
+            }
+
+            .journey-step {
+                flex-direction: column !important;
+                padding-left: 80px;
+            }
+
+            .journey-content {
+                width: 100%;
+            }
+
+            .journey-number {
+                left: 30px;
+                transform: translateX(-50%);
+            }
+
             .process-timeline::before {
                 left: 30px;
             }
@@ -1317,6 +1770,19 @@
 
             .case-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .before-after-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .before-after-body {
+                grid-template-columns: 1fr;
+            }
+
+            .before-after-body .before {
+                border-right: none;
+                border-bottom: 2px solid var(--light-cream);
             }
         }
 
@@ -1345,6 +1811,11 @@
                 width: 100%;
                 max-width: 300px;
                 text-align: center;
+            }
+
+            .quiz-container,
+            .calculator-container {
+                padding: 30px 20px;
             }
         }
 
@@ -1427,8 +1898,11 @@
             </button>
             <ul class="navbar-menu" id="navbarMenu">
                 <li><a href="#home">Início</a></li>
+                <li><a href="#ebook">Ebook Grátis</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#calculator">Calculadora</a></li>
+                <li><a href="#journey">Jornada 60+</a></li>
                 <li><a href="#kpi">Dados</a></li>
-                <li><a href="#so-what">So What?</a></li>
                 <li><a href="#business-case">Business Case</a></li>
                 <li><a href="#principles">Princípios</a></li>
                 <li><a href="#sectors">Setores</a></li>
@@ -1511,9 +1985,13 @@
                 Mais que responsabilidade social: estratégia de lucratividade. Transforme respeito em resultados financeiros com o Selo Ambiente 60+.
             </p>
             <div class="cta-buttons">
-                <a href="#kpi" class="btn btn-primary">
-                    <i class="fas fa-chart-line"></i>
-                    Ver Impacto nos KPIs
+                <a href="#quiz" class="btn btn-primary">
+                    <i class="fas fa-clipboard-question"></i>
+                    Fazer Quiz Grátis
+                </a>
+                <a href="#ebook" class="btn btn-ebook">
+                    <i class="fas fa-book"></i>
+                    Ebook Grátis
                 </a>
                 <a href="#process" class="btn btn-secondary">
                     <i class="fas fa-play"></i>
@@ -1529,6 +2007,378 @@
         </div>
         <div class="scroll-indicator">
             <i class="fas fa-chevron-down fa-2x"></i>
+        </div>
+    </section>
+
+    <!-- Ebook Section -->
+    <section class="ebook-section" id="ebook">
+        <div class="container">
+            <div class="ebook-container">
+                <div class="ebook-image fade-in">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Mundo Longevo e Economia Grisalha</h3>
+                    <p>Por Ricardo de Faria Barros</p>
+                </div>
+                <div class="ebook-content fade-in">
+                    <h2>📚 Ebook Grátis para Você</h2>
+                    <p>
+                        Baixe gratuitamente o ebook <strong>"Mundo Longevo e Economia Grisalha"</strong> e descubra 
+                        como a longevidade está transformando o mercado e criando oportunidades inéditas de negócio.
+                    </p>
+                    <ul class="ebook-benefits">
+                        <li>Dados exclusivos da Economia Prateada no Brasil e no mundo</li>
+                        <li>Projeções de crescimento por setor</li>
+                        <li>Estratégias para capturar este mercado em expansão</li>
+                        <li>Casos reais de empresas que já estão lucrando com a longevidade</li>
+                        <li>Como preparar sua empresa para a revolução da longevidade</li>
+                    </ul>
+                    <a href="https://www.plenalongevidade.com.br/ebook-economia-da-longevidade" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        Baixar Ebook Grátis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section" id="quiz">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Diagnóstico Rápido</span>
+                <h2 class="section-title">Sua Empresa Está Preparada para a Economia Prateada?</h2>
+                <p class="section-subtitle">
+                    Responda 5 perguntas em 2 minutos e descubra seu nível de preparação para atender o mercado 60+.
+                </p>
+            </div>
+            <div class="quiz-container fade-in">
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p style="text-align: center; margin-top: 10px; opacity: 0.7;">
+                        Pergunta <span id="currentQuestion">1</span> de 5
+                    </p>
+                </div>
+                <div id="quizQuestions">
+                    <!-- Questions will be inserted by JavaScript -->
+                </div>
+                <div class="quiz-result" id="quizResult">
+                    <h3 id="resultTitle"></h3>
+                    <p id="resultDescription"></p>
+                    <div style="font-size: 3rem; margin-bottom: 20px;" id="resultEmoji"></div>
+                    <a href="#contact" class="btn btn-primary" style="background: white; color: var(--primary-green);">
+                        <i class="fas fa-envelope"></i>
+                        Quero Saber Mais Sobre o Selo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator-section" id="calculator">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Ferramenta Interativa</span>
+                <h2 class="section-title">Calculadora de Oportunidade de Mercado</h2>
+                <p class="section-subtitle">
+                    Descubra quanto potencial de mercado você pode estar deixando de captar na sua região.
+                </p>
+            </div>
+            <div class="calculator-container fade-in">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="sector">Seu Setor</label>
+                        <select id="sector">
+                            <option value="">Selecione seu setor</option>
+                            <option value="varejo">Varejo</option>
+                            <option value="saude">Saúde</option>
+                            <option value="financeiro">Financeiro</option>
+                            <option value="turismo">Turismo e Hospitalidade</option>
+                            <option value="servicos">Serviços</option>
+                            <option value "industria">Indústria</option>
+                            <option value "educacao">Educação</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="companySize">Porte da Empresa</label>
+                        <select id="companySize">
+                            <option value="">Selecione o porte</option>
+                            <option value="pequeno">Pequeno (até 50 funcionários)</option>
+                            <option value="medio">Médio (51-200 funcionários)</option>
+                            <option value="grande">Grande (200+ funcionários)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="region">Região</label>
+                        <select id="region">
+                            <option value="">Selecione sua região</option>
+                            <option value="sudeste">Sudeste</option>
+                            <option value="sul">Sul</option>
+                            <option value="nordeste">Nordeste</option>
+                            <option value="norte">Norte</option>
+                            <option value="centro-oeste">Centro-Oeste</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="revenue">Faturamento Anual Estimado</label>
+                        <select id="revenue">
+                            <option value="">Selecione uma faixa</option>
+                            <option value="ate500k">Até R$ 500 mil</option>
+                            <option value="500k-2mi">R$ 500 mil - R$ 2 mi</option>
+                            <option value="2mi-10mi">R$ 2 mi - R$ 10 mi</option>
+                            <option value="10mi+">Acima de R$ 10 mi</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <button class="btn btn-primary" onclick="calculateOpportunity()">
+                        <i class="fas fa-calculator"></i>
+                        Calcular Oportunidade
+                    </button>
+                </div>
+                <div class="calculator-result" id="calculatorResult">
+                    <h3>Potencial de Mercado Não Capturado</h3>
+                    <div class="value" id="opportunityValue"></div>
+                    <p id="opportunityDescription"></p>
+                    <a href="#contact" class="btn btn-secondary" style="background: white; color: var(--primary-green);">
+                        <i class="fas fa-arrow-right"></i>
+                        Quero Capturar Esta Oportunidade
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Infographic Section -->
+    <section class="journey-section" id="journey">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Jornada do Cliente</span>
+                <h2 class="section-title">A Jornada do Cliente 60+ na Sua Empresa</h2>
+                <p class="section-subtitle">
+                    Cada ponto de contato é uma oportunidade de aplicar os Princípios do Selo Ambiente 60+.
+                </p>
+            </div>
+            <div class="journey-timeline">
+                <div class="journey-step fade-in">
+                    <div class="journey-content">
+                        <h4>1. Chegada e Primeiro Contato</h4>
+                        <p>
+                            O cliente 60+ chega ao estabelecimento. A primeira impressão define toda a experiência.
+                        </p>
+                        <div class="journey-principle">
+                            <strong>Princípio III:</strong> Acolhimento Respeitoso<br>
+                            <small>Recepção com linguagem respeitosa, escuta sem pressa, orientação clara do fluxo</small>
+                        </div>
+                    </div>
+                    <div class="journey-number">1</div>
+                </div>
+                <div class="journey-step fade-in">
+                    <div class="journey-content">
+                        <h4>2. Atendimento e Informação</h4>
+                        <p>
+                            O cliente busca informações sobre produtos, serviços ou procedimentos.
+                        </p>
+                        <div class="journey-principle">
+                            <strong>Princípio IV:</strong> Comunicação Clara<br>
+                            <small>Informações compreensíveis, sem jargões, com tempo para entendimento</small>
+                        </div>
+                    </div>
+                    <div class="journey-number">2</div>
+                </div>
+                <div class="journey-step fade-in">
+                    <div class="journey-content">
+                        <h4>3. Decisão e Compra</h4>
+                        <p>
+                            Momento da decisão de compra ou contratação do serviço.
+                        </p>
+                        <div class="journey-principle">
+                            <strong>Princípio V:</strong> Respeito à Autonomia<br>
+                            <small>A pessoa longeva decide por si, sem pressão ou infantilização</small>
+                        </div>
+                    </div>
+                    <div class="journey-number">3</div>
+                </div>
+                <div class="journey-step fade-in">
+                    <div class="journey-content">
+                        <h4>4. Pagamento e Finalização</h4>
+                        <p>
+                            Finalização da transação com clareza e transparência.
+                        </p>
+                        <div class="journey-principle">
+                            <strong>Princípio VIII:</strong> Privacidade e Proteção de Dados<br>
+                            <small>Sigilo no pagamento, sem exposição de valores ou dados sensíveis</small>
+                        </div>
+                    </div>
+                    <div class="journey-number">4</div>
+                </div>
+                <div class="journey-step fade-in">
+                    <div class="journey-content">
+                        <h4>5. Pós-Venda e Fidelização</h4>
+                        <p>
+                            Acompanhamento após a compra, suporte e construção de relacionamento.
+                        </p>
+                        <div class="journey-principle">
+                            <strong>Princípio XI:</strong> Participação e Escuta<br>
+                            <small>Canais acessíveis para feedback, tratamento respeitoso de reclamações</small>
+                        </div>
+                    </div>
+                    <div class="journey-number">5</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before After Section -->
+    <section class="before-after-section" id="before-after">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Educação Visual</span>
+                <h2 class="section-title">Antes e Depois no Atendimento</h2>
+                <p class="section-subtitle">
+                    Pequenas mudanças na abordagem fazem toda a diferença na experiência da pessoa longeva.
+                </p>
+            </div>
+            <div class="before-after-grid">
+                <div class="before-after-card fade-in">
+                    <div class="before-after-header">
+                        <div class="before">
+                            <i class="fas fa-times-circle"></i><br>
+                            Micro-Idadismo
+                        </div>
+                        <div class="after">
+                            <i class="fas fa-check-circle"></i><br>
+                            Abordagem do Selo
+                        </div>
+                    </div>
+                    <div class="before-after-body">
+                        <div class="before">
+                            <div class="icon"><i class="fas fa-volume-up"></i></div>
+                            <h5>Fala Exageradamente Alto</h5>
+                            <p>"FALA MAIS DEVAGAR QUE É PRA IDOSO ENTENDER"</p>
+                            <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">
+                                ❌ Presume deficiência auditiva<br>
+                                ❌ Constrange publicamente<br>
+                                ❌ Infantiliza a pessoa
+                            </p>
+                        </div>
+                        <div class="after">
+                            <div class="icon"><i class="fas fa-comments"></i></div>
+                            <h5>Comunicação Clara e Respeitosa</h5>
+                            <p>"Posso falar mais devagar se preferir?"</p>
+                            <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">
+                                ✓ Oferece sem presumir<br>
+                                ✓ Respeita a autonomia<br>
+                                ✓ Mantém dignidade
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="before-after-card fade-in">
+                    <div class="before-after-header">
+                        <div class="before">
+                            <i class="fas fa-times-circle"></i><br>
+                            Micro-Idadismo
+                        </div>
+                        <div class="after">
+                            <i class="fas fa-check-circle"></i><br>
+                            Abordagem do Selo
+                        </div>
+                    </div>
+                    <div class="before-after-body">
+                        <div class="before">
+                            <div class="icon"><i class="fas fa-user-friends"></i></div>
+                            <h5>Fala Apenas com o Acompanhante</h5>
+                            <p>"SEU FILHO DECIDE ISSO AÍ"</p>
+                            <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">
+                                ❌ Ignora a pessoa longeva<br>
+                                ❌ Presume incapacidade<br>
+                                ❌ Desrespeita autonomia
+                            </p>
+                        </div>
+                        <div class="after">
+                            <div class="icon"><i class="fas fa-handshake"></i></div>
+                            <h5>Fala Diretamente com a Pessoa</h5>
+                            <p>"O que a senhora acha? Posso explicar melhor?"</p>
+                            <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">
+                                ✓ Reconhece autonomia<br>
+                                ✓ Oferece apoio sem impor<br>
+                                ✓ Mantém dignidade
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="before-after-card fade-in">
+                    <div class="before-after-header">
+                        <div class="before">
+                            <i class="fas fa-times-circle"></i><br>
+                            Micro-Idadismo
+                        </div>
+                        <div class="after">
+                            <i class="fas fa-check-circle"></i><br>
+                            Abordagem do Selo
+                        </div>
+                    </div>
+                    <div class="before-after-body">
+                        <div class="before">
+                            <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                            <h5>Exclusivamente Digital</h5>
+                            <p>"SÓ TEM PELO APP, BAIXA AÍ"</p>
+                            <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">
+                                ❌ Cria barreira de acesso<br>
+                                ❌ Constrange por dificuldade<br>
+                                ❌ Exclui quem não tem familiaridade
+                            </p>
+                        </div>
+                        <div class="after">
+                            <div class="icon"><i class="fas fa-hands-helping"></i></div>
+                            <h5>Tecnologia Inclusiva</h5>
+                            <p>"Posso te ajudar com o app ou prefere atendimento presencial?"</p>
+                            <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">
+                                ✓ Oferece alternativas<br>
+                                ✓ Apoia sem constranger<br>
+                                ✓ Inclui todos os públicos
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="before-after-card fade-in">
+                    <div class="before-after-header">
+                        <div class="before">
+                            <i class="fas fa-times-circle"></i><br>
+                            Micro-Idadismo
+                        </div>
+                        <div class="after">
+                            <i class="fas fa-check-circle"></i><br>
+                            Abordagem do Selo
+                        </div>
+                    </div>
+                    <div class="before-after-body">
+                        <div class="before">
+                            <div class="icon"><i class="fas fa-clock"></i></div>
+                            <h5>Pressa e Impaciência</h5>
+                            <p>"SENHOR, TEM QUE DECIDIR LOGO, TENHO FILA"</p>
+                            <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">
+                                ❌ Gera ansiedade<br>
+                                ❌ Desrespeita tempo de decisão<br>
+                                ❌ Prioriza eficiência sobre dignidade
+                            </p>
+                        </div>
+                        <div class="after">
+                            <div class="icon"><i class="fas fa-hourglass-half"></i></div>
+                            <h5>Tempo Respeitoso</h5>
+                            <p>"Fique à vontade para decidir. Estou aqui se precisar."</p>
+                            <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">
+                                ✓ Respeita ritmo individual<br>
+                                ✓ Oferece apoio sem pressão<br>
+                                ✓ Mantém cordialidade
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -2170,6 +3020,163 @@
                 }
             });
         });
+
+        // ===== QUIZ FUNCTIONALITY =====
+        const quizQuestions = [
+            {
+                question: "Sua equipe recebe pessoas 60+ com linguagem respeitosa, sem infantilização?",
+                options: ["Sempre", "Às vezes", "Raramente"],
+                scores: [3, 2, 1]
+            },
+            {
+                question: "Você oferece alternativas não-digitais para etapas essenciais da compra/atendimento?",
+                options: ["Sim, sempre", "Às vezes", "Não, é tudo digital"],
+                scores: [3, 2, 1]
+            },
+            {
+                question: "Sua equipe fala diretamente com a pessoa 60+, mesmo quando há acompanhante?",
+                options: ["Sempre", "Depende da situação", "Geralmente fala com o acompanhante"],
+                scores: [3, 2, 1]
+            },
+            {
+                question: "Seus preços e informações estão visíveis e legíveis para pessoas com dificuldade visual?",
+                options: ["Sim, todos", "Alguns", "Não, são pequenos/digitais"],
+                scores: [3, 2, 1]
+            },
+            {
+                question: "Sua equipe recebeu treinamento sobre atendimento respeitoso e não idadista?",
+                options: ["Sim, recentemente", "Sim, mas faz tempo", "Não"],
+                scores: [3, 2, 1]
+            }
+        ];
+
+        let currentQuestion = 0;
+        let totalScore = 0;
+
+        function renderQuiz() {
+            const quizContainer = document.getElementById('quizQuestions');
+            const question = quizQuestions[currentQuestion];
+            
+            quizContainer.innerHTML = `
+                <div class="quiz-question">
+                    <h4>${question.question}</h4>
+                    <div class="quiz-options">
+                        ${question.options.map((option, index) => `
+                            <div class="quiz-option" onclick="selectOption(${index}, ${question.scores[index]})">
+                                ${option}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('currentQuestion').textContent = currentQuestion + 1;
+            document.getElementById('progressFill').style.width = `${((currentQuestion + 1) / quizQuestions.length) * 100}%`;
+        }
+
+        function selectOption(optionIndex, score) {
+            totalScore += score;
+            currentQuestion++;
+            
+            if (currentQuestion < quizQuestions.length) {
+                renderQuiz();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            const maxScore = quizQuestions.length * 3;
+            const percentage = (totalScore / maxScore) * 100;
+            
+            let resultTitle, resultDescription, resultEmoji;
+            
+            if (percentage >= 80) {
+                resultTitle = "🏆 Nível Avançado!";
+                resultDescription = "Sua empresa está muito bem preparada para a Economia Prateada! Você já aplica a maioria dos princípios do Selo Ambiente 60+. Que tal buscar a certificação oficial?";
+                resultEmoji = "🌟";
+            } else if (percentage >= 50) {
+                resultTitle = "📈 Nível Intermediário";
+                resultDescription = "Sua empresa está no caminho certo, mas há espaço para melhorias. O Selo Ambiente 60+ pode ajudar a estruturar suas práticas e captar mais oportunidades.";
+                resultEmoji = "💪";
+            } else {
+                resultTitle = "🎯 Nível Iniciante";
+                resultDescription = "Sua empresa tem grande potencial de melhoria! A Economia Prateada é uma oportunidade de R$ 2 trilhões. Vamos conversar sobre como se preparar?";
+                resultEmoji = "🚀";
+            }
+            
+            document.getElementById('quizQuestions').style.display = 'none';
+            document.getElementById('quizResult').style.display = 'block';
+            document.getElementById('resultTitle').textContent = resultTitle;
+            document.getElementById('resultDescription').textContent = resultDescription;
+            document.getElementById('resultEmoji').textContent = resultEmoji;
+        }
+
+        // Initialize Quiz
+        renderQuiz();
+
+        // ===== CALCULATOR FUNCTIONALITY =====
+        function calculateOpportunity() {
+            const sector = document.getElementById('sector').value;
+            const companySize = document.getElementById('companySize').value;
+            const region = document.getElementById('region').value;
+            const revenue = document.getElementById('revenue').value;
+            
+            if (!sector || !companySize || !region || !revenue) {
+                alert('Por favor, preencha todos os campos!');
+                return;
+            }
+            
+            // Simple calculation logic (can be refined)
+            const baseMultipliers = {
+                varejo: 0.25,
+                saude: 0.35,
+                financeiro: 0.30,
+                turismo: 0.28,
+                servicos: 0.22,
+                industria: 0.20,
+                educacao: 0.18
+            };
+            
+            const sizeMultipliers = {
+                pequeno: 1.0,
+                medio: 1.5,
+                grande: 2.0
+            };
+            
+            const regionMultipliers = {
+                sudeste: 1.3,
+                sul: 1.2,
+                nordeste: 1.0,
+                norte: 0.9,
+                'centro-oeste': 1.1
+            };
+            
+            const revenueMultipliers = {
+                ate500k: 0.5,
+                '500k-2mi': 1.0,
+                '2mi-10mi': 1.5,
+                '10mi+': 2.0
+            };
+            
+            const baseOpportunity = 1000000; // R$ 1 million base
+            const opportunity = baseOpportunity * 
+                (baseMultipliers[sector] || 0.25) * 
+                (sizeMultipliers[companySize] || 1.0) * 
+                (regionMultipliers[region] || 1.0) * 
+                (revenueMultipliers[revenue] || 1.0);
+            
+            const formattedValue = new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+                maximumFractionDigits: 0
+            }).format(opportunity);
+            
+            document.getElementById('opportunityValue').textContent = formattedValue;
+            document.getElementById('opportunityDescription').textContent = 
+                `Este é o potencial anual que sua empresa pode estar deixando de captar no mercado 60+ na sua região. Com o Selo Ambiente 60+, você pode acessar esta oportunidade!`;
+            document.getElementById('calculatorResult').style.display = 'block';
+        }
     </script>
 </body>
 </html>
