@@ -1,716 +1,2738 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Selo Ambiente 60+: Cidadania, Respeito e Empatia — Transforme respeito em resultados, com acessibilidade e humanização." />
-  <title>Selo Ambiente 60+ | Cidadania, Respeito e Empatia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selo Ambiente 60+: Cidadania, Respeito e Empatia - Transforme respeito em resultados financeiros.">
+    <title>Selo Ambiente 60+ | Cidadania, Respeito e Empatia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-green: #2d6a4f;
+            --secondary-green: #40916c;
+            --light-green: #52b788;
+            --accent-gold: #d4a373;
+            --warm-orange: #e9c46a;
+            --sun-yellow: #f4a261;
+            --deep-blue: #1d3557;
+            --sky-blue: #457b9d;
+            --light-cream: #f8f9fa;
+            --text-dark: #2b2d42;
+            --white: #ffffff;
+            
+            --gradient-seal: linear-gradient(135deg, #2d6a4f 0%, #40916c 50%, #52b788 100%);
+            --gradient-border: linear-gradient(135deg, #d4a373 0%, #e9c46a 50%, #f4a261 100%);
+            --gradient-sky: linear-gradient(135deg, #1d3557 0%, #457b9d 50%, #68a0b3 100%);
+            --gradient-warm: linear-gradient(135deg, #e9c46a 0%, #f4a261 50%, #e76f51 100%);
+            --gradient-hero: linear-gradient(135deg, #2d6a4f 0%, #40916c 30%, #52b788 60%, #74c69d 100%);
+            
+            --shadow-soft: 0 10px 40px rgba(0,0,0,0.1);
+            --shadow-strong: 0 20px 60px rgba(0,0,0,0.15);
+        }
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
 
-  <style>
-    :root{
-      --bg:#0b1220;
-      --card:#0f1a2d;
-      --muted:#a8b3c7;
-      --text:#eef2fb;
-      --primary:#f6b73c;  /* amarelo/laranja acolhedor */
-      --primary2:#ff8c3a; /* laranja */
-      --accent:#2dd4bf;   /* verde-água leve */
-      --ring: rgba(246,183,60,.35);
-      --shadow: 0 16px 40px rgba(0,0,0,.35);
-      --radius: 18px;
-      --max: 1120px;
-    }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            background: var(--light-cream);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:
-        radial-gradient(900px 380px at 20% 10%, rgba(255,140,58,.18), transparent 55%),
-        radial-gradient(900px 380px at 80% 15%, rgba(45,212,191,.14), transparent 50%),
-        radial-gradient(1100px 520px at 55% 85%, rgba(246,183,60,.14), transparent 55%),
-        linear-gradient(180deg, #071021, #0b1220 38%, #071021);
-      color: var(--text);
-      line-height:1.55;
-    }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    a{color:inherit}
-    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
-    .pill{
-      display:inline-flex; gap:10px; align-items:center;
-      padding:10px 14px; border-radius:999px;
-      background: rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.10);
-      color: var(--muted);
-      backdrop-filter: blur(10px);
-    }
-    .pill i{color:var(--primary)}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:14px 18px; border-radius:14px;
-      border:1px solid rgba(255,255,255,.12);
-      text-decoration:none; font-weight:700;
-      transition: .18s ease;
-      white-space:nowrap;
-    }
-    .btn-primary{
-      background: linear-gradient(135deg, var(--primary), var(--primary2));
-      color:#131a27;
-      box-shadow: 0 12px 30px rgba(246,183,60,.25);
-      border-color: rgba(246,183,60,.35);
-    }
-    .btn-primary:hover{transform: translateY(-1px); filter: brightness(1.02)}
-    .btn-ghost{
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-    }
-    .btn-ghost:hover{background: rgba(255,255,255,.09); transform: translateY(-1px)}
-    .tag{
-      font-size:12px; letter-spacing:.08em; text-transform:uppercase;
-      color: rgba(255,255,255,.70);
-      display:inline-block;
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
-    }
+        /* ===== NAVIGATION ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: var(--shadow-soft);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
 
-    header{
-      position: sticky; top:0; z-index:50;
-      background: rgba(7,16,33,.62);
-      border-bottom:1px solid rgba(255,255,255,.08);
-      backdrop-filter: blur(10px);
-    }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 0;
-      gap:14px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:12px; text-decoration:none;
-    }
-    .brand-badge{
-      width:44px; height:44px; border-radius:14px;
-      background: linear-gradient(135deg, rgba(246,183,60,.95), rgba(255,140,58,.95));
-      display:grid; place-items:center; color:#101828;
-      box-shadow: 0 18px 40px rgba(255,140,58,.18);
-      border: 1px solid rgba(255,255,255,.20);
-      position:relative;
-      overflow:hidden;
-    }
-    .brand-badge:before{
-      content:"";
-      position:absolute; inset:-60%;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.75), transparent 45%);
-      transform: rotate(18deg);
-      opacity:.35;
-    }
-    .brand-title{
-      display:flex; flex-direction:column; line-height:1.1
-    }
-    .brand-title strong{
-      font-weight:900; letter-spacing:.02em
-    }
-    .brand-title span{
-      font-family: "Playfair Display", serif;
-      color: rgba(255,255,255,.86);
-      font-size: 13px;
-    }
-    .navlinks{
-      display:flex; gap:14px; align-items:center; flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    .navlinks a{
-      text-decoration:none;
-      color: rgba(255,255,255,.78);
-      padding:10px 10px;
-      border-radius:12px;
-      border:1px solid transparent;
-    }
-    .navlinks a:hover{
-      color: var(--text);
-      background: rgba(255,255,255,.06);
-      border-color: rgba(255,255,255,.10);
-    }
+        .navbar.scrolled {
+            padding: 10px 0;
+            background: rgba(255,255,255,0.98);
+        }
 
-    .hero{
-      padding:64px 0 36px;
-    }
-    .hero-grid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:24px;
-      align-items:stretch;
-    }
-    .hero h1{
-      margin:16px 0 12px;
-      font-size: clamp(34px, 5vw, 56px);
-      line-height:1.05;
-      font-weight:900;
-      letter-spacing:-.02em;
-    }
-    .hero h1 .hl{
-      background: linear-gradient(135deg, var(--primary), var(--primary2));
-      -webkit-background-clip: text;
-      background-clip:text;
-      color: transparent;
-    }
-    .hero p{
-      margin:0 0 18px;
-      color: rgba(255,255,255,.80);
-      font-size: 16.5px;
-      max-width: 58ch;
-    }
-    .hero-ctas{
-      display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;
-    }
-    .kpis{
-      display:grid; gap:12px;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      margin-top:18px;
-    }
-    .kpi{
-      padding:14px 14px;
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.10);
-    }
-    .kpi strong{display:block; font-size:18px}
-    .kpi span{color: var(--muted); font-size:13px}
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .card{
-      background: rgba(255,255,255,.05);
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .hero-card{
-      padding:18px;
-      position:relative;
-      overflow:hidden;
-    }
-    .hero-card:before{
-      content:"";
-      position:absolute; inset:-40%;
-      background: radial-gradient(circle at 40% 35%, rgba(45,212,191,.18), transparent 55%),
-                  radial-gradient(circle at 65% 65%, rgba(246,183,60,.20), transparent 55%);
-      transform: rotate(12deg);
-      pointer-events:none;
-    }
-    .hero-card-inner{
-      position:relative;
-      padding:18px;
-      border-radius: calc(var(--radius) - 6px);
-      background: linear-gradient(180deg, rgba(15,26,45,.78), rgba(15,26,45,.55));
-      border: 1px solid rgba(255,255,255,.10);
-    }
-    .stamp{
-      display:flex; align-items:center; justify-content:space-between; gap:10px;
-      padding:14px;
-      border-radius: 16px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.10);
-      margin-bottom: 12px;
-    }
-    .stamp .left{
-      display:flex; gap:12px; align-items:center;
-    }
-    .seal{
-      width:52px; height:52px; border-radius:16px;
-      background: linear-gradient(135deg, rgba(246,183,60,.95), rgba(255,140,58,.95));
-      display:grid; place-items:center; color:#0f172a;
-      border:1px solid rgba(255,255,255,.18);
-    }
-    .stamp small{color: rgba(255,255,255,.70)}
-    .list{
-      margin:0; padding:0; list-style:none;
-      display:grid; gap:10px;
-    }
-    .list li{
-      display:flex; gap:10px; align-items:flex-start;
-      color: rgba(255,255,255,.82);
-    }
-    .list i{
-      color: var(--accent);
-      margin-top:4px;
-    }
-    .divider{
-      height:1px; background: rgba(255,255,255,.10);
-      margin:14px 0;
-    }
-    .mini{
-      display:flex; gap:10px; flex-wrap:wrap;
-    }
-    .mini .tag{border-color: rgba(246,183,60,.25); background: rgba(246,183,60,.08)}
+        .navbar-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            text-decoration: none;
+        }
 
-    section{padding:36px 0}
-    .section-title{
-      display:flex; align-items:flex-end; justify-content:space-between; gap:14px; flex-wrap:wrap;
-      margin-bottom: 16px;
-    }
-    .section-title h2{
-      margin:0;
-      font-size: 28px;
-      letter-spacing:-.02em;
-    }
-    .section-title p{
-      margin:0;
-      color: var(--muted);
-      max-width: 60ch;
-    }
+        .navbar-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
 
-    .grid3{
-      display:grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap:14px;
-    }
-    .feature{
-      padding:16px;
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.10);
-      height:100%;
-    }
-    .feature i{
-      font-size:20px;
-      color: var(--primary);
-    }
-    .feature h3{
-      margin:10px 0 6px;
-      font-size: 16px;
-    }
-    .feature p{
-      margin:0;
-      color: rgba(255,255,255,.78);
-      font-size: 14px;
-    }
+        .navbar-menu a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
 
-    .two{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-      align-items:start;
-    }
-    .box{
-      padding:16px;
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.10);
-    }
-    .box h3{margin:0 0 8px}
-    .box p{margin:0; color: rgba(255,255,255,.78)}
-    .box ul{margin:10px 0 0; padding-left:18px; color: rgba(255,255,255,.78)}
+        .navbar-menu a:hover {
+            color: var(--primary-green);
+        }
 
-    .cta{
-      padding:26px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      background: linear-gradient(135deg, rgba(246,183,60,.18), rgba(255,140,58,.12));
-      border: 1px solid rgba(246,183,60,.25);
-    }
-    .cta h3{
-      margin:0 0 6px;
-      font-size: 20px;
-    }
-    .cta p{margin:0; color: rgba(255,255,255,.80)}
-    footer{
-      padding:24px 0 34px;
-      color: rgba(255,255,255,.70);
-      border-top: 1px solid rgba(255,255,255,.08);
-    }
-    .foot-grid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:14px;
-      align-items:start;
-    }
-    .foot-grid a{color: rgba(255,255,255,.84)}
-    .small{font-size: 13px; color: rgba(255,255,255,.70)}
+        .navbar-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            cursor: pointer;
+        }
 
-    /* Responsive */
-    @media (max-width: 940px){
-      .hero-grid{grid-template-columns: 1fr; }
-      .grid3{grid-template-columns: 1fr; }
-      .two{grid-template-columns: 1fr; }
-      .kpis{grid-template-columns: 1fr 1fr;}
-      .navlinks{display:none}
-    }
-    @media (max-width: 520px){
-      .kpis{grid-template-columns: 1fr;}
-      .btn{width:100%}
-      .hero-ctas{flex-direction:column}
-    }
-  </style>
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-seal);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            border: none;
+            box-shadow: var(--shadow-strong);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            background: var(--gradient-border);
+        }
+        /* ===== SECTION NAVIGATION BUTTONS ===== */
+        .section-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 12px 25px;
+            background: var(--gradient-seal);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-soft);
+            background: var(--gradient-border);
+        }
+
+        .nav-btn.secondary {
+            background: transparent;
+            border: 2px solid var(--primary-green);
+            color: var(--primary-green);
+        }
+
+        .nav-btn.secondary:hover {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            background: var(--gradient-hero);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .floating-circle:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-circle:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 5s;
+        }
+
+        .floating-circle:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 10s;
+        }
+
+        .floating-circle:nth-child(4) {
+            width: 250px;
+            height: 250px;
+            top: 30%;
+            right: 30%;
+            animation-delay: 15s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -30px) scale(1.1); }
+            50% { transform: translate(-20px, 20px) scale(0.9); }
+            75% { transform: translate(20px, 30px) scale(1.05); }
+        }
+
+        .people-connection {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 15px;
+            padding: 0 5%;
+            opacity: 0.3;
+        }
+
+        .person-silhouette {
+            width: 60px;
+            height: 120px;
+            background: linear-gradient(to top, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+            border-radius: 60px 60px 0 0;
+            animation: personWave 3s infinite ease-in-out;
+            position: relative;
+        }
+
+        .person-silhouette::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(to top, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+            border-radius: 50%;
+        }
+
+        .person-silhouette:nth-child(1) { animation-delay: 0s; height: 110px; }
+        .person-silhouette:nth-child(2) { animation-delay: 0.3s; height: 130px; }
+        .person-silhouette:nth-child(3) { animation-delay: 0.6s; height: 125px; }
+        .person-silhouette:nth-child(4) { animation-delay: 0.9s; height: 135px; }
+        .person-silhouette:nth-child(5) { animation-delay: 1.2s; height: 120px; }
+        .person-silhouette:nth-child(6) { animation-delay: 1.5s; height: 115px; }
+        .person-silhouette:nth-child(7) { animation-delay: 1.8s; height: 128px; }
+
+        @keyframes personWave {
+            0%, 100% { transform: translateY(0) rotate(-2deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+
+        .connection-lines {
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 20%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.3) 80%, transparent 100%);
+            animation: pulseLine 3s infinite ease-in-out;
+        }
+
+        @keyframes pulseLine {
+            0%, 100% { opacity: 0.3; height: 2px; }
+            50% { opacity: 0.6; height: 4px; }
+        }
+
+        .growing-tree {
+            position: absolute;
+            bottom: 0;
+            right: 10%;
+            width: 200px;
+            height: 300px;
+            opacity: 0.2;
+        }
+
+        .tree-trunk {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 150px;
+            background: linear-gradient(to top, #8b4513, #a0522d);
+            border-radius: 10px;
+            animation: growTrunk 3s ease-out;
+        }
+
+        .tree-leaves {
+            position: absolute;
+            bottom: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(82, 183, 136, 0.6) 0%, rgba(64, 145, 108, 0.3) 70%, transparent 100%);
+            border-radius: 50%;
+            animation: growLeaves 3s ease-out 1s, leavesSway 5s infinite ease-in-out 3s;
+        }
+
+        @keyframes growTrunk { from { height: 0; } to { height: 150px; } }
+        @keyframes growLeaves { from { transform: translateX(-50%) scale(0); opacity: 0; } to { transform: translateX(-50%) scale(1); opacity: 0.2; } }
+        @keyframes leavesSway { 0%, 100% { transform: translateX(-50%) rotate(-3deg); } 50% { transform: translateX(-50%) rotate(3deg); } }
+
+        .sun-rays {
+            position: absolute;
+            top: 10%;
+            right: 15%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .sun-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle, #f4a261 0%, #e9c46a 100%);
+            border-radius: 50%;
+            animation: sunPulse 3s infinite ease-in-out;
+        }
+
+        .sun-ray {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 4px;
+            height: 60px;
+            background: linear-gradient(to top, #f4a261, transparent);
+            transform-origin: bottom center;
+        }
+
+        .sun-ray:nth-child(1) { transform: translate(-50%, -100%) rotate(0deg); }
+        .sun-ray:nth-child(2) { transform: translate(-50%, -100%) rotate(45deg); }
+        .sun-ray:nth-child(3) { transform: translate(-50%, -100%) rotate(90deg); }
+        .sun-ray:nth-child(4) { transform: translate(-50%, -100%) rotate(135deg); }
+        .sun-ray:nth-child(5) { transform: translate(-50%, -100%) rotate(180deg); }
+        .sun-ray:nth-child(6) { transform: translate(-50%, -100%) rotate(225deg); }
+        .sun-ray:nth-child(7) { transform: translate(-50%, -100%) rotate(270deg); }
+        .sun-ray:nth-child(8) { transform: translate(-50%, -100%) rotate(315deg); }
+
+        @keyframes sunPulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 30px rgba(244, 162, 97, 0.5); }
+            50% { transform: translate(-50%, -50%) scale(1.1); box-shadow: 0 0 50px rgba(244, 162, 97, 0.8); }
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--white);
+            z-index: 2;
+            padding: 40px 20px;
+            max-width: 1200px;
+            position: relative;
+        }
+
+        .seal-logo {
+            width: 280px;
+            height: 280px;
+            margin: 0 auto 40px;
+            background: var(--white);
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: var(--shadow-strong);
+            animation: sealFloat 3s infinite ease-in-out;
+            position: relative;
+            border: 4px solid var(--accent-gold);
+        }
+
+        @keyframes sealFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .seal-logo svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
+            background: linear-gradient(to right, #ffffff, #e9c46a, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 300;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            letter-spacing: 2px;
+        }
+
+        .hero-tagline {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            font-weight: 400;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary-green);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-green);
+        }
+
+        .btn-ebook {
+            background: var(--gradient-warm);
+            color: var(--white);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .btn-ebook:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--white);
+            animation: bounce 2s infinite;
+            z-index: 2;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        .impact-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .impact-badge {
+            background: rgba(255,255,255,0.15);
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            padding: 100px 0;
+            scroll-margin-top: 100px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-tag {
+            display: inline-block;
+            padding: 8px 20px;
+            background: var(--gradient-seal);
+            color: var(--white);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: var(--text-dark);
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.8;
+        }
+
+        /* ===== EBOOK SECTION ===== */
+        .ebook-section {
+            background: var(--gradient-warm);
+            color: var(--white);
+            padding: 80px 0;
+        }
+        .ebook-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .ebook-image {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .ebook-image i {
+            font-size: 5rem;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .ebook-image h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .ebook-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .ebook-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .ebook-benefits {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .ebook-benefits li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1rem;
+        }
+
+        .ebook-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        /* ===== CALCULATOR SECTION ===== */
+        .calculator-section {
+            background: var(--light-cream);
+            padding: 100px 0;
+        }
+
+        .calculator-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-strong);
+        }
+
+        .calculator-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+
+        .form-group select {
+            padding: 15px;
+            border: 2px solid var(--light-cream);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .calculator-result {
+            text-align: center;
+            padding: 40px;
+            background: var(--gradient-seal);
+            color: var(--white);
+            border-radius: 20px;
+            display: none;
+        }
+        .calculator-result .value {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--warm-orange);
+            margin-bottom: 20px;
+        }
+
+        /* ===== JOURNEY SECTION ===== */
+        .journey-section {
+            background: var(--white);
+            padding: 100px 0;
+        }
+
+        .journey-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .journey-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-border);
+            border-radius: 2px;
+        }
+
+        .journey-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .journey-step:nth-child(odd) { flex-direction: row; }
+        .journey-step:nth-child(even) { flex-direction: row-reverse; }
+
+        .journey-content {
+            width: 45%;
+            padding: 35px;
+            background: var(--light-cream);
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            z-index: 2;
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .journey-number {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-seal);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            z-index: 3;
+            box-shadow: 0 0 0 8px var(--light-cream), var(--shadow-soft);
+            border: 3px solid var(--accent-gold);
+        }
+
+        .journey-content h4 {
+            font-size: 1.3rem;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+
+        .journey-content p {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            opacity: 0.85;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .journey-principle {
+            background: var(--white);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent-gold);
+        }
+
+        .journey-principle strong {
+            color: var(--primary-green);
+        }
+
+        /* ===== BEFORE AFTER SECTION ===== */
+        .before-after-section {
+            background: var(--light-cream);
+            padding: 100px 0;
+        }
+
+        .before-after-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .before-after-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .before-after-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: var(--gradient-seal);
+            color: var(--white);
+        }
+
+        .before-after-header .before {
+            padding: 20px;
+            text-align: center;
+            background: rgba(231, 111, 81, 0.3);
+        }
+
+        .before-after-header .after {
+            padding: 20px;
+            text-align: center;
+            background: rgba(82, 183, 136, 0.3);
+        }
+
+        .before-after-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .before-after-body .before {
+            padding: 30px;
+            background: #fef2f2;
+            border-right: 2px solid var(--light-cream);
+        }
+
+        .before-after-body .after {
+            padding: 30px;
+            background: #f0fdf4;
+        }
+        .before-after-body h5 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .before-after-body .before h5 { color: #dc2626; }
+        .before-after-body .after h5 { color: var(--primary-green); }
+
+        .before-after-body p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .before-after-body .before p { color: #dc2626; }
+        .before-after-body .after p { color: var(--primary-green); }
+
+        .before-after-body .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .before-after-body .before .icon { color: #dc2626; }
+        .before-after-body .after .icon { color: var(--primary-green); }
+
+        /* ===== KPI SECTION ===== */
+        .kpi-section {
+            background: var(--white);
+            padding: 100px 0;
+        }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .kpi-card {
+            background: var(--light-cream);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--primary-green);
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .kpi-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-seal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 2rem;
+            color: var(--white);
+        }
+
+        .kpi-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .kpi-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .kpi-description {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .kpi-source {
+            font-size: 0.85rem;
+            opacity: 0.6;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        /* ===== SO WHAT SECTION ===== */
+        .so-what-section {
+            background: var(--gradient-sky);
+            color: var(--white);
+            padding: 100px 0;
+        }
+
+        .so-what-section .section-title { color: var(--white); }
+        .so-what-section .section-subtitle { color: rgba(255,255,255,0.9); }
+
+        .so-what-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .so-what-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .so-what-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .so-what-question {
+            font-size: 1.1rem;
+            font-style: italic;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 3px solid var(--warm-orange);
+        }
+
+        .so-what-answer {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--warm-orange);
+            line-height: 1.6;
+        }
+
+        /* ===== BUSINESS CASE ===== */
+        .business-case {
+            background: var(--light-cream);
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .case-column {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow-soft);
+            border-top: 5px solid var(--primary-green);
+        }
+
+        .case-column.clients {
+            border-top-color: var(--warm-orange);
+        }
+
+        .case-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .case-column.clients .case-title {
+            color: var(--deep-blue);
+        }
+
+        .case-item {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .case-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .case-item-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-seal);
+            color: var(--white);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .case-column.clients .case-item-number {
+            background: var(--gradient-warm);
+        }
+
+        .case-item-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .case-item-text {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            opacity: 0.8;
+            line-height: 1.7;
+        }
+
+        .case-item-text ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .case-item-text li {
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .case-item-text li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        /* ===== 15 PRINCIPLES ===== */
+        .principles {
+            background: var(--white);
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .principle-card {
+            background: var(--light-cream);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid var(--primary-green);
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .principle-card:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .principle-number {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .principle-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .principle-text {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            opacity: 0.75;
+            line-height: 1.6;
+        }
+
+        /* ===== 12 SECTORS ===== */
+        .sectors {
+            background: var(--gradient-seal);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .sectors::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(212, 163, 115, 0.1) 0%, transparent 50%);
+        }
+
+        .sectors .section-title {
+            color: var(--white);
+        }
+
+        .sectors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (min-width: 992px) {
+            .sectors-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        @media (min-width: 1200px) {
+            .sectors-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        .sector-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 35px 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .sector-card:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .sector-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--warm-orange);
+        }
+
+        .sector-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .sector-text {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            line-height: 1.6;
+        }
+
+        /* ===== PROCESS ===== */
+        .process {
+            background: var(--light-cream);
+        }
+
+        .process-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-border);
+            border-radius: 2px;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .process-step:nth-child(odd) { flex-direction: row; }
+        .process-step:nth-child(even) { flex-direction: row-reverse; }
+
+        .step-content {
+            width: 45%;
+            padding: 35px;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            z-index: 2;
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .step-number {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-seal);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            z-index: 3;
+            box-shadow: 0 0 0 8px var(--light-cream), var(--shadow-soft);
+            border: 3px solid var(--accent-gold);
+        }
+
+        .step-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+
+        .step-text {
+            font-size: 1rem;
+            color: var(--text-dark);
+            opacity: 0.85;
+            line-height: 1.7;
+        }
+
+        /* ===== ANIMO ===== */
+        .animo {
+            background: var(--white);
+        }
+
+        .animo-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .animo-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary-green);
+            margin-bottom: 25px;
+        }
+
+        .animo-text p {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            opacity: 0.85;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .founder-info {
+            background: var(--light-cream);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+            border-left: 4px solid var(--primary-green);
+            border-top: 3px solid var(--accent-gold);
+            text-align: left;
+        }
+
+        .founder-name {
+            font-weight: 600;
+            color: var(--primary-green);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .founder-title {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            opacity: 0.8;
+            line-height: 1.8;
+        }
+
+        .founder-title i {
+            color: var(--primary-green);
+            width: 20px;
+        }
+
+        /* ===== FINAL MESSAGE ===== */
+        .final-message {
+            background: var(--gradient-warm);
+            color: var(--white);
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .message-box {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 50px;
+            border-radius: 20px;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .message-box h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .message-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            opacity: 0.95;
+        }
+
+        .message-highlight {
+            font-weight: 700;
+            color: var(--white);
+            font-size: 1.3rem;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(255,255,255,0.3);
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: var(--gradient-warm);
+            color: var(--white);
+            text-align: center;
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+
+        .cta-section .section-title {
+            color: var(--white);
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section .section-subtitle {
+            color: rgba(255,255,255,0.9);
+            max-width: 700px;
+            margin: 0 auto 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section .cta-buttons {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--deep-blue);
+            color: var(--white);
+            padding: 80px 0 40px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-border);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-column h4 {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: var(--warm-orange);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--accent-gold);
+        }
+
+        .footer-column p,
+        .footer-column a {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            line-height: 1.8;
+            color: var(--white);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            opacity: 1;
+            color: var(--warm-orange);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .navbar-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow-soft);
+            }
+
+            .navbar-menu.active {
+                display: flex;
+            }
+
+            .navbar-toggle {
+                display: block;
+            }
+
+            .ebook-container {
+                grid-template-columns: 1fr;
+            }
+
+            .calculator-form {
+                grid-template-columns: 1fr;
+            }
+
+            .journey-timeline::before {
+                left: 30px;
+            }
+
+            .journey-step {
+                flex-direction: column !important;
+                padding-left: 80px;
+            }
+
+            .journey-content {
+                width: 100%;
+            }
+
+            .journey-number {
+                left: 30px;
+                transform: translateX(-50%);
+            }
+
+            .process-timeline::before {
+                left: 30px;
+            }
+
+            .process-step {
+                flex-direction: column !important;
+                padding-left: 80px;
+            }
+
+            .step-content {
+                width: 100%;
+            }
+
+            .step-number {
+                left: 30px;
+                transform: translateX(-50%);
+            }
+
+            .case-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .before-after-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .before-after-body {
+                grid-template-columns: 1fr;
+            }
+
+            .before-after-body .before {
+                border-right: none;
+                border-bottom: 2px solid var(--light-cream);
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .section-nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .quiz-container,
+            .calculator-container {
+                padding: 30px 20px;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== LOADING ===== */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-seal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-content {
+            text-align: center;
+            color: var(--white);
+        }
+        .loader-seal {
+            width: 150px;
+            height: 150px;
+            background: var(--white);
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            animation: rotate 3s infinite linear;
+            border: 4px solid var(--accent-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
 </head>
-
 <body>
-  <header>
-    <div class="container">
-      <div class="nav" aria-label="Navegação principal">
-        <a class="brand" href="#topo">
-          <div class="brand-badge" aria-hidden="true"><i class="fa-solid fa-heart"></i></div>
-          <div class="brand-title">
-            <strong>AMBIENTE 60+</strong>
-            <span>Cidadania · Respeito · Empatia</span>
-          </div>
-        </a>
-        <nav class="navlinks" aria-label="Seções">
-          <a href="#o-que-e">O que é</a>
-          <a href="#por-que">Por que aderir</a>
-          <a href="#como-funciona">Como funciona</a>
-          <a href="#setores">Setores</a>
-          <a href="#contato">Contato</a>
-        </nav>
-        <a class="btn btn-primary" href="#contato"><i class="fa-solid fa-paper-plane"></i> Quero aderir</a>
-      </div>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-seal">
+                <svg viewBox="0 0 100 100" width="100" height="100">
+                    <circle cx="50" cy="50" r="48" fill="#2d6a4f" stroke="#d4a373" stroke-width="3"/>
+                    <text x="50" y="55" text-anchor="middle" font-size="20" fill="#2d6a4f" font-weight="bold">60+</text>
+                </svg>
+            </div>
+            <p>Construindo experiência...</p>
+        </div>
     </div>
-  </header>
 
-  <main id="topo">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-grid">
-          <div>
-            <span class="pill"><i class="fa-solid fa-badge-check"></i> Selo de Boas Práticas para ambientes que respeitam os longevos</span>
-            <h1>
-              Um ambiente que acolhe <span class="hl">60+</span><br/>
-              melhora a experiência de <span class="hl">todo mundo</span>.
-            </h1>
-            <p>
-              O <strong>Selo Ambiente 60+</strong> é uma ferramenta prática de cidadania e gestão: orienta melhorias de atendimento,
-              acessibilidade e comunicação, fortalecendo reputação, confiança e fidelização.
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-content">
+            <a href="#home" class="navbar-logo">Ambiente 60+</a>
+            <button class="navbar-toggle" id="navbarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#ebook">Ebook</a></li>
+                <li><a href="#calculator">Calculadora</a></li>
+                <li><a href="#journey">Jornada</a></li>
+                <li><a href="#kpi">Dados</a></li>
+                <li><a href="#principles">Princípios</a></li>
+                <li><a href="#sectors">Setores</a></li>
+                <li><a href="#process">Processo</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+            <div class="floating-circle"></div>
+            <div class="connection-lines"></div>
+            <div class="people-connection">
+                <div class="person-silhouette"></div>
+                <div class="person-silhouette"></div>
+                <div class="person-silhouette"></div>
+                <div class="person-silhouette"></div>
+                <div class="person-silhouette"></div>
+                <div class="person-silhouette"></div>
+                <div class="person-silhouette"></div>
+            </div>
+            <div class="growing-tree">
+                <div class="tree-trunk"></div>
+                <div class="tree-leaves"></div>
+            </div>
+            <div class="sun-rays">
+                <div class="sun-center"></div>
+                <div class="sun-ray" style="--rotation: 0deg"></div>
+                <div class="sun-ray" style="--rotation: 45deg"></div>
+                <div class="sun-ray" style="--rotation: 90deg"></div>
+                <div class="sun-ray" style="--rotation: 135deg"></div>
+                <div class="sun-ray" style="--rotation: 180deg"></div>
+                <div class="sun-ray" style="--rotation: 225deg"></div>
+                <div class="sun-ray" style="--rotation: 270deg"></div>
+                <div class="sun-ray" style="--rotation: 315deg"></div>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <div class="seal-logo">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="200" cy="200" r="195" fill="#2d6a4f" stroke="#d4a373" stroke-width="8"/>
+                    <circle cx="200" cy="200" r="185" fill="#2d6a4f"/>
+                    <circle cx="200" cy="200" r="175" fill="none" stroke="#d4a373" stroke-width="4"/>
+                    <path id="topCurve" d="M 80 200 A 120 120 0 0 1 320 200" fill="none"/>
+                    <text font-size="28" font-weight="bold" fill="#f8f9fa" font-family="Montserrat">
+                        <textPath href="#topCurve" startOffset="50%" text-anchor="middle">AMBIENTE:60+</textPath>
+                    </text>
+                    <circle cx="200" cy="200" r="140" fill="#1d3557" opacity="0.3"/>
+                    <circle cx="200" cy="100" r="25" fill="#f4a261"/>
+                    <g stroke="#f4a261" stroke-width="3">
+                        <line x1="200" y1="70" x2="200" y2="55"/>
+                        <line x1="200" y1="130" x2="200" y2="145"/>
+                        <line x1="170" y1="100" x2="155" y2="100"/>
+                        <line x1="230" y1="100" x2="245" y2="100"/>
+                        <line x1="175" y1="75" x2="162" y2="62"/>
+                        <line x1="225" y1="75" x2="238" y2="62"/>
+                        <line x1="175" y1="125" x2="162" y2="138"/>
+                        <line x1="225" y1="125" x2="238" y2="138"/>
+                    </g>
+                    <rect x="190" y="140" width="20" height="60" fill="#8b4513"/>
+                    <ellipse cx="200" cy="130" rx="70" ry="50" fill="#40916c"/>
+                    <ellipse cx="180" cy="140" rx="40" ry="35" fill="#52b788"/>
+                    <ellipse cx="220" cy="140" rx="40" ry="35" fill="#52b788"/>
+                    <path id="bottomCurve" d="M 100 200 A 100 100 0 0 0 300 200" fill="none"/>
+                    <text font-size="16" fill="#f8f9fa" font-family="Montserrat">
+                        <textPath href="#bottomCurve" startOffset="50%" text-anchor="middle">Cidadania - Respeito - Empatia</textPath>
+                    </text>
+                </svg>
+            </div>
+            <h1>Ambiente 60+</h1>
+            <p class="hero-subtitle">Cidadania • Respeito • Empatia</p>
+            <p class="hero-tagline">
+                Mais que responsabilidade social: estratégia de lucratividade. Transforme respeito em resultados financeiros com o Selo Ambiente 60+.
             </p>
-
-            <div class="hero-ctas">
-              <a class="btn btn-primary" href="#como-funciona"><i class="fa-solid fa-route"></i> Ver como funciona</a>
-              <a class="btn btn-ghost" href="#o-que-e"><i class="fa-regular fa-circle-play"></i> Entender o selo</a>
+            <div class="cta-buttons">
+                <a href="#ebook" class="btn btn-ebook">
+                    <i class="fas fa-book"></i>
+                    Ebook Grátis
+                </a>
+                <a href="#process" class="btn btn-secondary">
+                    <i class="fas fa-play"></i>
+                    Conheça o Processo
+                </a>
             </div>
-
-            <div class="kpis" role="list" aria-label="Destaques">
-              <div class="kpi" role="listitem">
-                <strong>Humanização</strong>
-                <span>Atendimento com respeito e autonomia</span>
-              </div>
-              <div class="kpi" role="listitem">
-                <strong>Acessibilidade</strong>
-                <span>Orientações simples e aplicáveis</span>
-              </div>
-              <div class="kpi" role="listitem">
-                <strong>Confiança</strong>
-                <span>Reputação e vínculo com a comunidade</span>
-              </div>
-              <div class="kpi" role="listitem">
-                <strong>Resultados</strong>
-                <span>Melhor experiência, mais retorno</span>
-              </div>
+            <div class="impact-badges">
+                <span class="impact-badge">✓ R$ 2 Trilhões/ano</span>
+                <span class="impact-badge">✓ 59 Milhões 50+</span>
+                <span class="impact-badge">✓ 38% Mais Consumo</span>
+                <span class="impact-badge">✓ 12 Setores</span>
             </div>
-          </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down fa-2x"></i>
+        </div>
+    </section>
 
-          <aside class="hero-card card" aria-label="Resumo do Selo">
-            <div class="hero-card-inner">
-              <div class="stamp">
-                <div class="left">
-                  <div class="seal" aria-hidden="true"><i class="fa-solid fa-certificate"></i></div>
-                  <div>
-                    <strong>Ambiente 60+</strong><br/>
-                    <small>Cidadania · Respeito · Empatia</small>
-                  </div>
+    <!-- Section Navigation -->
+    <div class="container">
+        <div class="section-nav">
+            <a href="#kpi" class="nav-btn">
+                <i class="fas fa-chart-line"></i>
+                Ver Dados da Economia Prateada
+            </a>
+            <a href="#principles" class="nav-btn secondary">
+                <i class="fas fa-list-check"></i>
+                Ver 15 Princípios
+            </a>
+            <a href="#sectors" class="nav-btn secondary">
+                <i class="fas fa-building"></i>
+                Ver 12 Setores
+            </a>
+        </div>
+    </div>
+
+    <!-- Ebook Section -->
+    <section class="ebook-section" id="ebook">
+        <div class="container">
+            <div class="ebook-container">
+                <div class="ebook-image fade-in">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Mundo Longevo e Economia Grisalha</h3>
+                    <p>Por Ricardo de Faria Barros</p>
                 </div>
-                <span class="tag">2026</span>
-              </div>
-
-              <ul class="list">
-                <li><i class="fa-solid fa-circle-check"></i> Diagnóstico guiado (checklist de adesão e conformidade)</li>
-                <li><i class="fa-solid fa-circle-check"></i> Recomendações por setor (varejo, serviços, turismo e mobilidade)</li>
-                <li><i class="fa-solid fa-circle-check"></i> Materiais para equipe e comunicação com o público 60+</li>
-                <li><i class="fa-solid fa-circle-check"></i> Capacitação e trilhas (opcional) para aprofundar práticas</li>
-              </ul>
-
-              <div class="divider"></div>
-
-              <div class="mini" aria-label="Palavras-chave">
-                <span class="tag">Autonomia</span>
-                <span class="tag">Segurança</span>
-                <span class="tag">Empatia</span>
-                <span class="tag">Clareza</span>
-                <span class="tag">Inclusão</span>
-              </div>
+                <div class="ebook-content fade-in">
+                    <h2>📚 Ebook Grátis para Você</h2>
+                    <p>
+                        Baixe gratuitamente o ebook <strong>"Mundo Longevo e Economia Grisalha"</strong> e descubra 
+                        como a longevidade está transformando o mercado e criando oportunidades inéditas de negócio.
+                    </p>
+                    <ul class="ebook-benefits">
+                        <li>Dados exclusivos da Economia Prateada no Brasil e no mundo</li>
+                        <li>Projeções de crescimento por setor</li>
+                        <li>Estratégias para capturar este mercado em expansão</li>
+                        <li>Casos reais de empresas que já estão lucrando com a longevidade</li>
+                        <li>Como preparar sua empresa para a revolução da longevidade</li>
+                    </ul>
+                    <a href="https://www.plenalongevidade.com.br/ebook-economia-da-longevidade" target="_blank" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        Baixar Ebook Grátis
+                    </a>
+                </div>
             </div>
-          </aside>
         </div>
-      </div>
     </section>
 
-    <!-- O QUE É -->
-    <section id="o-que-e">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <span class="tag">O que é</span>
-            <h2>Um selo que vira prática — não só decoração</h2>
-          </div>
-          <p>
-            O objetivo é orientar melhorias reais no ambiente, no atendimento e na cultura de respeito aos longevos,
-            com critérios claros e linguagem simples.
-          </p>
+    <!-- Calculator Section -->
+    <section class="calculator-section" id="calculator">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Ferramenta Interativa</span>
+                <h2 class="section-title">Calculadora de Oportunidade de Mercado</h2>
+                <p class="section-subtitle">
+                    Descubra quanto potencial de mercado você pode estar deixando de captar na sua região.
+                </p>
+            </div>
+            <div class="calculator-container fade-in">
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="sector">Seu Setor</label>
+                        <select id="sector">
+                            <option value="">Selecione seu setor</option>
+                            <option value="varejo">Varejo</option>
+                            <option value="saude">Saúde</option>
+                            <option value="financeiro">Financeiro</option>
+                            <option value="turismo">Turismo e Hospitalidade</option>
+                            <option value="servicos">Serviços</option>
+                            <option value="industria">Indústria</option>
+                            <option value="educacao">Educação</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="companySize">Porte da Empresa</label>
+                        <select id="companySize">
+                            <option value="">Selecione o porte</option>
+                            <option value="pequeno">Pequeno (até 50 funcionários)</option>
+                            <option value="medio">Médio (51-200 funcionários)</option>
+                            <option value="grande">Grande (200+ funcionários)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="region">Região</label>
+                        <select id="region">
+                            <option value="">Selecione sua região</option>
+                            <option value="sudeste">Sudeste</option>
+                            <option value="sul">Sul</option>
+                            <option value="nordeste">Nordeste</option>
+                            <option value="norte">Norte</option>
+                            <option value="centro-oeste">Centro-Oeste</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="revenue">Faturamento Anual Estimado</label>
+                        <select id="revenue">
+                            <option value="">Selecione uma faixa</option>
+                            <option value="ate500k">Até R$ 500 mil</option>
+                            <option value="500k-2mi">R$ 500 mil - R$ 2 mi</option>
+                            <option value="2mi-10mi">R$ 2 mi - R$ 10 mi</option>
+                            <option value="10mi+">Acima de R$ 10 mi</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <button class="btn btn-primary" onclick="calculateOpportunity()">
+                        <i class="fas fa-calculator"></i>
+                        Calcular Oportunidade
+                    </button>
+                </div>
+                <div class="calculator-result" id="calculatorResult">
+                    <h3>Potencial de Mercado Não Capturado</h3>
+                    <div class="value" id="opportunityValue"></div>
+                    <p id="opportunityDescription"></p>
+                    <a href="#contact" class="btn btn-secondary" style="background: white; color: var(--primary-green);">
+                        <i class="fas fa-arrow-right"></i>
+                        Quero Capturar Esta Oportunidade
+                    </a>
+                </div>
+            </div>
+            <div class="section-nav">
+                <a href="#journey" class="nav-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    Próxima: Jornada do Cliente 60+
+                </a>
+                <a href="#ebook" class="nav-btn secondary">
+                    <i class="fas fa-arrow-up"></i>
+                    Voltar ao Ebook
+                </a>
+            </div>
         </div>
-
-        <div class="grid3">
-          <div class="feature">
-            <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i>
-            <h3>Humanização que se percebe</h3>
-            <p>Rotinas, postura e comunicação que respeitam o tempo, a escuta e a dignidade.</p>
-          </div>
-          <div class="feature">
-            <i class="fa-solid fa-universal-access" aria-hidden="true"></i>
-            <h3>Acessibilidade aplicada</h3>
-            <p>Boas práticas para circulação, sinalização, conforto, prioridade e acolhimento.</p>
-          </div>
-          <div class="feature">
-            <i class="fa-solid fa-people-group" aria-hidden="true"></i>
-            <h3>Benefício coletivo</h3>
-            <p>Melhor para 60+ — e também para famílias, pessoas com deficiência e público geral.</p>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- POR QUE -->
-    <section id="por-que">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <span class="tag">Por que aderir</span>
-            <h2>Respeito vira experiência — e experiência vira retorno</h2>
-          </div>
-          <p>
-            Quando o ambiente reduz atritos e aumenta acolhimento, melhora a jornada do cliente e fortalece confiança.
-          </p>
+    <!-- Journey Section -->
+    <section class="journey-section" id="journey">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Jornada do Cliente</span>
+                <h2 class="section-title">A Jornada do Cliente 60+ na Sua Empresa</h2>
+                <p class="section-subtitle">
+                    Cada ponto de contato é uma oportunidade de aplicar os Princípios do Selo Ambiente 60+.
+                </p>
+            </div>
+            <div class="journey-timeline">
+                <div class="journey-step fade-in">
+                    <div class="journey-content">
+                        <h4>1. Chegada e Primeiro Contato</h4>
+                        <p>
+                            O cliente 60+ chega ao estabelecimento. A primeira impressão define toda a experiência.
+                        </p>
+                        <div class="journey-principle">
+                            <strong>Princípio III:</strong> Acolhimento Respeitoso<br>
+                            <small>Recepção com linguagem respeitosa, escuta sem pressa, orientação clara do fluxo</small>
+                        </div>
+                    </div>
+                    <div class="journey-number">1</div>
+                </div>
+                <div class="journey-step fade-in">
+                    <div class="journey-content">
+                        <h4>2. Atendimento e Informação</h4>
+                        <p>
+                            O cliente busca informações sobre produtos, serviços ou procedimentos.
+                        </p>
+                        <div class="journey-principle">
+                            <strong>Princípio IV:</strong> Comunicação Clara<br>
+                            <small>Informações compreensíveis, sem jargões, com tempo para entendimento</small>
+                        </div>
+                    </div>
+                    <div class="journey-number">2</div>
+                </div>
+                <div class="journey-step fade-in">
+                    <div class="journey-content">
+                        <h4>3. Decisão e Compra</h4>
+                        <p>
+                            Momento da decisão de compra ou contratação do serviço.
+                        </p>
+                        <div class="journey-principle">
+                            <strong>Princípio V:</strong> Respeito à Autonomia<br>
+                            <small>A pessoa longeva decide por si, sem pressão ou infantilização</small>
+                        </div>
+                    </div>
+                    <div class="journey-number">3</div>
+                </div>
+                <div class="journey-step fade-in">
+                    <div class="journey-content">
+                        <h4>4. Pagamento e Finalização</h4>
+                        <p>
+                            Finalização da transação com clareza e transparência.
+                        </p>
+                        <div class="journey-principle">
+                            <strong>Princípio VIII:</strong> Privacidade e Proteção de Dados<br>
+                            <small>Sigilo no pagamento, sem exposição de valores ou dados sensíveis</small>
+                        </div>
+                    </div>
+                    <div class="journey-number">4</div>
+                </div>
+                <div class="journey-step fade-in">
+                    <div class="journey-content">
+                        <h4>5. Pós-Venda e Fidelização</h4>
+                        <p>
+                            Acompanhamento após a compra, suporte e construção de relacionamento.
+                        </p>
+                        <div class="journey-principle">
+                            <strong>Princípio XI:</strong> Participação e Escuta<br>
+                            <small>Canais acessíveis para feedback, tratamento respeitoso de reclamações</small>
+                        </div>
+                    </div>
+                    <div class="journey-number">5</div>
+                </div>
+            </div>
+            <div class="section-nav">
+                <a href="#before-after" class="nav-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    Próxima: Antes e Depois
+                </a>
+                <a href="#calculator" class="nav-btn secondary">
+                    <i class="fas fa-arrow-up"></i>
+                    Voltar à Calculadora
+                </a>
+            </div>
         </div>
+    </section>
 
-        <div class="two">
-          <div class="box">
-            <h3><i class="fa-solid fa-chart-line" style="color:var(--primary)"></i> Gestão e reputação</h3>
-            <p>
-              Um padrão de cuidado bem implementado reduz reclamações, melhora avaliações, eleva a confiança e
-              reforça o compromisso social da organização.
+    <!-- Before After Section -->
+    <section class="before-after-section" id="before-after">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Educação Visual</span>
+                <h2 class="section-title">Antes e Depois no Atendimento</h2>
+                <p class="section-subtitle">
+                    Pequenas mudanças na abordagem fazem toda a diferença na experiência da pessoa longeva.
+                </p>
+            </div>
+            <div class="before-after-grid">
+                <div class="before-after-card fade-in">
+                    <div class="before-after-header">
+                        <div class="before">
+                            <i class="fas fa-times-circle"></i><br>
+                            Micro-Idadismo
+                        </div>
+                        <div class="after">
+                            <i class="fas fa-check-circle"></i><br>
+                            Abordagem do Selo
+                        </div>
+                    </div>
+                    <div class="before-after-body">
+                        <div class="before">
+                            <div class="icon"><i class="fas fa-volume-up"></i></div>
+                            <h5>Fala Exageradamente Alto</h5>
+                            <p>"FALA MAIS DEVAGAR QUE É PRA IDOSO ENTENDER"</p>
+                            <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">
+                                ❌ Presume deficiência auditiva<br>
+                                ❌ Constrange publicamente<br>
+                                ❌ Infantiliza a pessoa
+                            </p>
+                        </div>
+                        <div class="after">
+                            <div class="icon"><i class="fas fa-comments"></i></div>
+                            <h5>Comunicação Clara e Respeitosa</h5>
+                            <p>"Posso falar mais devagar se preferir?"</p>
+                            <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">
+                                ✓ Oferece sem presumir<br>
+                                ✓ Respeita a autonomia<br>
+                                ✓ Mantém dignidade
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="before-after-card fade-in">
+                    <div class="before-after-header">
+                        <div class="before">
+                            <i class="fas fa-times-circle"></i><br>
+                            Micro-Idadismo
+                        </div>
+                        <div class="after">
+                            <i class="fas fa-check-circle"></i><br>
+                            Abordagem do Selo
+                        </div>
+                    </div>
+                    <div class="before-after-body">
+                        <div class="before">
+                            <div class="icon"><i class="fas fa-user-friends"></i></div>
+                            <h5>Fala Apenas com o Acompanhante</h5>
+                            <p>"SEU FILHO DECIDE ISSO AÍ"</p>
+                            <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">
+                                ❌ Ignora a pessoa longeva<br>
+                                ❌ Presume incapacidade<br>
+                                ❌ Desrespeita autonomia
+                            </p>
+                        </div>
+                        <div class="after">
+                            <div class="icon"><i class="fas fa-handshake"></i></div>
+                            <h5>Fala Diretamente com a Pessoa</h5>
+                            <p>"O que a senhora acha? Posso explicar melhor?"</p>
+                            <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.7;">
+                                ✓ Reconhece autonomia<br>
+                                ✓ Oferece apoio sem impor<br>
+                                ✓ Mantém dignidade
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-nav">
+                <a href="#kpi" class="nav-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    Próxima: Dados da Economia Prateada
+                </a>
+                <a href="#journey" class="nav-btn secondary">
+                    <i class="fas fa-arrow-up"></i>
+                    Voltar à Jornada
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- KPI Section -->
+    <section class="kpi-section" id="kpi">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Dados da Economia Prateada</span>
+                <h2 class="section-title">O Tamanho da Oportunidade</h2>
+                <p class="section-subtitle">
+                    Números que não podem ser ignorados por nenhuma estratégia de negócio.
+                </p>
+            </div>
+            <div class="kpi-grid">
+                <div class="kpi-card fade-in">
+                    <div class="kpi-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="kpi-value">R$ 2 Tri</div>
+                    <div class="kpi-label">Movimentação Anual</div>
+                    <p class="kpi-description">
+                        Economia Prateada no Brasil (50+)
+                    </p>
+                    <div class="kpi-source">Fonte: CNN Brasil / Data8, 2024</div>
+                </div>
+                <div class="kpi-card fade-in">
+                    <div class="kpi-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="kpi-value">59 Mi</div>
+                    <div class="kpi-label">Brasileiros 50+</div>
+                    <p class="kpi-description">
+                        Em 2024, representando 24% do consumo privado
+                    </p>
+                    <div class="kpi-source">Fonte: Data8 Brasil Prateado, 2024</div>
+                </div>
+                <div class="kpi-card fade-in">
+                    <div class="kpi-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="kpi-value">38%</div>
+                    <div class="kpi-label">Mais Consumo Per Capita</div>
+                    <p class="kpi-description">
+                        Comparado à população abaixo de 50 anos
+                    </p>
+                    <div class="kpi-source">Fonte: Data8, 2024</div>
+                </div>
+                <div class="kpi-card fade-in">
+                    <div class="kpi-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="kpi-value">40%</div>
+                    <div class="kpi-label">Da População em 2044</div>
+                    <p class="kpi-description">
+                        Projeção de crescimento demográfico
+                    </p>
+                    <div class="kpi-source">Fonte: ONU, 2024</div>
+                </div>
+            </div>
+            <div class="section-nav">
+                <a href="#principles" class="nav-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    Próxima: 15 Princípios
+                </a>
+                <a href="#before-after" class="nav-btn secondary">
+                    <i class="fas fa-arrow-up"></i>
+                    Voltar ao Antes e Depois
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15 Principles -->
+    <section class="principles" id="principles">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Fundamentos</span>
+                <h2 class="section-title">Carta de 15 Princípios</h2>
+                <p class="section-subtitle">
+                    Compromissos universais que orientam todas as instituições certificadas.
+                </p>
+            </div>
+            <div class="principles-grid">
+                <div class="principle-card fade-in">
+                    <div class="principle-number">Princípio I</div>
+                    <h3 class="principle-title">Reconhecimento da Pessoa Longeva</h3>
+                    <p class="principle-text">Sujeito de direitos, autonomia e valor social em todas as interações.</p>
+                </div>
+                <div class="principle-card fade-in">
+                    <div class="principle-number">Princípio II</div>
+                    <h3 class="principle-title">Combate ao Idadismo</h3>
+                    <p class="principle-text">Prevenção e coibição de qualquer discriminação por idade.</p>
+                </div>
+                <div class="principle-card fade-in">
+                    <div class="principle-number">Princípio III</div>
+                    <h3 class="principle-title">Acolhimento Respeitoso</h3>
+                    <p class="principle-text">Atendimento cordial, humano e digno desde o primeiro contato.</p>
+                </div>
+                <div class="principle-card fade-in">
+                    <div class="principle-number">Princípio IV</div>
+                    <h3 class="principle-title">Comunicação Clara</h3>
+                    <p class="principle-text">Informações compreensíveis, objetivas e acessíveis.</p>
+                </div>
+                <div class="principle-card fade-in">
+                    <div class="principle-number">Princípio V</div>
+                    <h3 class="principle-title">Respeito à Autonomia</h3>
+                    <p class="principle-text">A pessoa longeva participa e decide quando apta a se expressar.</p>
+                </div>
+                <div class="principle-card fade-in">
+                    <div class="principle-number">Princípio VI</div>
+                    <h3 class="principle-title">Acessibilidade Relacional</h3>
+                    <p class="principle-text">Orientação e apoio que reduzem confusão e desgaste.</p>
+                </div>
+                <div class="principle-card fade-in">
+                    <div class="principle-number">Princípio VII</div>
+                    <h3 class="principle-title">Tecnologia Inclusiva</h3>
+                    <p class="principle-text">Digitalização com alternativas e apoio humano.</p>
+                </div>
+                <div class="principle-card fade-in">
+                    <div class="principle-number">Princípio VIII</div>
+                    <h3 class="principle-title">Privacidade e Proteção de Dados</h3>
+                    <p class="principle-text">Sigilo, confidencialidade e conformidade com LGPD.</p>
+                </div>
+                <div class="principle-card fade-in">
+                    <div class="principle-number">Princípio IX</div>
+                    <h3 class="principle-title">Ambientes Seguros</h3>
+                    <p class="principle-text">Organização e segurança que favorecem circulação digna.</p>
+                </div>
+                <div class="principle-card fade-in">
+                    <div class="principle-number">Princípio X</div>
+                    <h3 class="principle-title">Qualidade dos Bens e Serviços</h3>
+                    <p class="principle-text">Padrões compatíveis com a dignidade da pessoa longeva.</p>
+                </div>
+                <div class="principle-card fade-in">
+                    <div class="principle-number">Princípio XI</div>
+                    <h3 class="principle-title">Participação e Escuta</h3>
+                    <p class="principle-text">Canais acessíveis para feedback e melhoria contínua.</p>
+                </div>
+                <div class="principle-card fade-in">
+                    <div class="principle-number">Princípio XII</div>
+                    <h3 class="principle-title">Qualificação de Equipes</h3>
+                    <p class="principle-text">Treinamento para atendimento respeitoso e não idadista.</p>
+                </div>
+                <div class="principle-card fade-in">
+                    <div class="principle-number">Princípio XIII</div>
+                    <h3 class="principle-title">Trabalhadores Longevos</h3>
+                    <p class="principle-text">Valorização e condições dignas para colaboradores 60+.</p>
+                </div>
+                <div class="principle-card fade-in">
+                    <div class="principle-number">Princípio XIV</div>
+                    <h3 class="principle-title">Encaminhamento Responsável</h3>
+                    <p class="principle-text">Situações sensíveis tratadas com discrição e competência.</p>
+                </div>
+                <div class="principle-card fade-in">
+                    <div class="principle-number">Princípio XV</div>
+                    <h3 class="principle-title">Compromisso Institucional</h3>
+                    <p class="principle-text">Cultura de cidadania, respeito e empatia na longevidade.</p>
+                </div>
+            </div>
+            <div class="section-nav">
+                <a href="#sectors" class="nav-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    Próxima: 12 Setores
+                </a>
+                <a href="#kpi" class="nav-btn secondary">
+                    <i class="fas fa-arrow-up"></i>
+                    Voltar aos Dados
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12 Sectors -->
+    <section class="sectors" id="sectors">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Abrangência</span>
+                <h2 class="section-title">12 Anexos Setoriais</h2>
+                <p class="section-subtitle">
+                    Diretrizes específicas para diferentes contextos institucionais.
+                </p>
+            </div>
+            <div class="sectors-grid">
+                <div class="sector-card fade-in">
+                    <div class="sector-icon"><i class="fas fa-utensils"></i></div>
+                    <h3 class="sector-title">Anexo 1</h3>
+                    <h4 class="sector-title">Bares, Restaurantes e Cafés</h4>
+                    <p class="sector-text">Acolhimento, cardápio acessível, permanência digna</p>
+                </div>
+                <div class="sector-card fade-in">
+                    <div class="sector-icon"><i class="fas fa-shopping-bag"></i></div>
+                    <h3 class="sector-title">Anexo 2</h3>
+                    <h4 class="sector-title">Varejo em Geral</h4>
+                    <p class="sector-text">Atendimento, prova de produtos, pagamento respeitoso</p>
+                </div>
+                <div class="sector-card fade-in">
+                    <div class="sector-icon"><i class="fas fa-hotel"></i></div>
+                    <h3 class="sector-title">Anexo 3</h3>
+                    <h4 class="sector-title">Hospedagem</h4>
+                    <p class="sector-text">Check-in, circulação, serviços internos</p>
+                </div>
+                <div class="sector-card fade-in">
+                    <div class="sector-icon"><i class="fas fa-university"></i></div>
+                    <h3 class="sector-title">Anexo 4</h3>
+                    <h4 class="sector-title">Financeiro e Seguros</h4>
+                    <p class="sector-text">Contratos, prevenção de fraudes, privacidade</p>
+                </div>
+                <div class="sector-card fade-in">
+                    <div class="sector-icon"><i class="fas fa-hospital"></i></div>
+                    <h3 class="sector-title">Anexo 5</h3>
+                    <h4 class="sector-title">Saúde</h4>
+                    <p class="sector-text">Acolhimento, exames, privacidade em saúde</p>
+                </div>
+                <div class="sector-card fade-in">
+                    <div class="sector-icon"><i class="fas fa-theater-masks"></i></div>
+                    <h3 class="sector-title">Anexo 6</h3>
+                    <h4 class="sector-title">Cultural e Lazer</h4>
+                    <p class="sector-text">Participação, convivência, atividades</p>
+                </div>
+                <div class="sector-card fade-in">
+                    <div class="sector-icon"><i class="fas fa-landmark"></i></div>
+                    <h3 class="sector-title">Anexo 7</h3>
+                    <h4 class="sector-title">Gestão Pública</h4>
+                    <p class="sector-text">Serviços, direitos, cidadania ativa</p>
+                </div>
+                <div class="sector-card fade-in">
+                    <div class="sector-icon"><i class="fas fa-bus"></i></div>
+                    <h3 class="sector-title">Anexo 8</h3>
+                    <h4 class="sector-title">Mobilidade e Turismo</h4>
+                    <p class="sector-text">Embarque, segurança, jornada digna</p>
+                </div>
+                <div class="sector-card fade-in">
+                    <div class="sector-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 class="sector-title">Anexo 9</h3>
+                    <h4 class="sector-title">Educação e Formação</h4>
+                    <p class="sector-text">Escolas, cursos, universidades, aprendizagem ao longo da vida</p>
+                </div>
+                <div class="sector-card fade-in">
+                    <div class="sector-icon"><i class="fas fa-tools"></i></div>
+                    <h3 class="sector-title">Anexo 10</h3>
+                    <h4 class="sector-title">Empresas de Serviços</h4>
+                    <p class="sector-text">Telecom, energia, assistência técnica, SAC</p>
+                </div>
+                <div class="sector-card fade-in">
+                    <div class="sector-icon"><i class="fas fa-industry"></i></div>
+                    <h3 class="sector-title">Anexo 11</h3>
+                    <h4 class="sector-title">Indústria</h4>
+                    <p class="sector-text">Produtos, rotulagem, SAC, pós-venda, garantia</p>
+                </div>
+                <div class="sector-card fade-in">
+                    <div class="sector-icon"><i class="fas fa-tractor"></i></div>
+                    <h3 class="sector-title">Anexo 12</h3>
+                    <h4 class="sector-title">Agronegócio</h4>
+                    <p class="sector-text">Produtos, insumos, segurança no trabalho rural</p>
+                </div>
+            </div>
+            <div class="section-nav">
+                <a href="#process" class="nav-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    Próxima: Processo de Certificação
+                </a>
+                <a href="#principles" class="nav-btn secondary">
+                    <i class="fas fa-arrow-up"></i>
+                    Voltar aos Princípios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Jornada de Certificação</span>
+                <h2 class="section-title">Como Funciona o Processo</h2>
+                <p class="section-subtitle">
+                    Uma jornada estruturada de transformação cultural, mediada pela Ânimo Desenvolvimento Humano.
+                </p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step fade-in">
+                    <div class="step-content">
+                        <h3 class="step-title">1. Adesão à Carta de Princípios</h3>
+                        <p class="step-text">A instituição assume publicamente os 15 princípios universais.</p>
+                    </div>
+                    <div class="step-number">1</div>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-content">
+                        <h3 class="step-title">2. Sensibilização Interna</h3>
+                        <p class="step-text">Lideranças e equipes são engajadas no propósito do selo.</p>
+                    </div>
+                    <div class="step-number">2</div>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-content">
+                        <h3 class="step-title">3. Implementação das Diretrizes Setoriais</h3>
+                        <p class="step-text">Aplicação das normas específicas do seu setor.</p>
+                    </div>
+                    <div class="step-number">3</div>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-content">
+                        <h3 class="step-title">4. Diagnóstico de Conformidade</h3>
+                        <p class="step-text">Avaliação detalhada da situação atual, identificando gaps.</p>
+                    </div>
+                    <div class="step-number">4</div>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-content">
+                        <h3 class="step-title">5. Treinamentos Especializados</h3>
+                        <p class="step-text">Capacitação nas Diretrizes e nos 15 Princípios.</p>
+                    </div>
+                    <div class="step-number">5</div>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-content">
+                        <h3 class="step-title">6. Ajustes e Adaptações</h3>
+                        <p class="step-text">Modificações em processos e estruturas para conformidade.</p>
+                    </div>
+                    <div class="step-number">6</div>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="step-content">
+                        <h3 class="step-title">7. Lançamento Local do Selo</h3>
+                        <p class="step-text">Cerimônia de certificação e comunicação ao mercado.</p>
+                    </div>
+                    <div class="step-number">7</div>
+                </div>
+            </div>
+            <div class="section-nav">
+                <a href="#animo" class="nav-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    Próxima: Sobre a Ânimo
+                </a>
+                <a href="#sectors" class="nav-btn secondary">
+                    <i class="fas fa-arrow-up"></i>
+                    Voltar aos Setores
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ânimo -->
+    <section class="animo" id="animo">
+        <div class="container">
+            <div class="animo-content">
+                <div class="animo-text fade-in">
+                    <h3>Ânimo Desenvolvimento Humano</h3>
+                    <p>
+                        Gestora e criadora do Selo Ambiente 60+: Cidadania, Respeito e Empatia, 
+                        a Ânimo Desenvolvimento Humano dedica-se ao desenvolvimento de soluções 
+                        formativas, conteúdos e metodologias de apoio para transformação cultural 
+                        nas organizações.
+                    </p>
+                    <p>
+                        Com foco no alinhamento institucional e das equipes aos preceitos do selo, 
+                        respeitamos a realidade e natureza de cada organização, promovendo mudanças 
+                        sustentáveis e genuínas.
+                    </p>
+                    <div class="founder-info">
+                        <div class="founder-name">
+                            <i class="fas fa-user-circle"></i> Ricardo de Faria Barros
+                        </div>
+                        <div class="founder-title">
+                            <i class="fas fa-brain"></i> Psicólogo • Logoterapeuta<br>
+                            <i class="fas fa-user-graduate"></i> Mestre em Gestão Social e Trabalho<br>
+                            <i class="fas fa-clock"></i> Consultor de Longevidade (Projeto 70+ ANABB)<br>
+                            <i class="fas fa-globe"></i> Autor do site Plena Longevidade<br>
+                            <i class="fas fa-envelope"></i> ricardo@animodh.com.br
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-nav">
+                <a href="#contact" class="nav-btn">
+                    <i class="fas fa-arrow-right"></i>
+                    Próxima: Contato
+                </a>
+                <a href="#process" class="nav-btn secondary">
+                    <i class="fas fa-arrow-up"></i>
+                    Voltar ao Processo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Message -->
+    <section class="final-message">
+        <div class="container">
+            <div class="message-box fade-in">
+                <h3>Atender Bem um Idoso Não é Gentileza</h3>
+                <p>
+                    Valorizar os longevos não é <strong>caridade</strong> nem <strong>politicamente correto</strong> – 
+                    é a <strong>estratégia de negócio mais inteligente</strong> para as próximas décadas.
+                </p>
+                <p>
+                    O octogenário de hoje não é o "velhinho coitado" de antigamente. Ele é ativo, consciente, 
+                    exigente, com recursos e influenciador.
+                </p>
+                <p>
+                    Quem não enxergar isso vai simplesmente <strong>ficar para trás</strong>, servindo um mercado 
+                    cada vez menor, enquanto os concorrentes atendem o mercado que mais cresce no planeta.
+                </p>
+                <p class="message-highlight">
+                    Atender bem um idoso é investimento com retorno garantido. 🌟
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Sua Instituição Está Pronta para Esta Transformação?</h2>
+            <p class="section-subtitle">
+                Junte-se ao movimento de organizações que estão redefinindo o relacionamento 
+                com a longevidade. Não é apenas compliance — é legado.
             </p>
-            <ul>
-              <li>Atendimento mais consistente</li>
-              <li>Menos conflitos no balcão e no fluxo</li>
-              <li>Mais fidelização e indicação</li>
-            </ul>
-          </div>
-
-          <div class="box">
-            <h3><i class="fa-solid fa-shield-heart" style="color:var(--accent)"></i> Segurança e acolhimento</h3>
-            <p>
-              Boas práticas de comunicação, prioridade e acessibilidade aumentam segurança emocional e física,
-              especialmente para pessoas com mobilidade reduzida ou limitações sensoriais.
-            </p>
-            <ul>
-              <li>Clareza na informação</li>
-              <li>Ambiente mais confortável</li>
-              <li>Postura de equipe mais empática</li>
-            </ul>
-          </div>
+            <div class="cta-buttons">
+                <a href="mailto:ricardo@animodh.com.br" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i>
+                    Fale Conosco
+                </a>
+                <a href="#process" class="btn btn-secondary">
+                    <i class="fas fa-file-contract"></i>
+                    Solicitar Proposta
+                </a>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- COMO FUNCIONA -->
-    <section id="como-funciona">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <span class="tag">Como funciona</span>
-            <h2>3 passos práticos para adesão</h2>
-          </div>
-          <p>
-            Você pode começar simples, evoluir por etapas e, se desejar, contratar pacotes completos de capacitação.
-          </p>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Selo Ambiente 60+</h4>
+                    <p>Cidadania, Respeito e Empatia</p>
+                    <p>Uma iniciativa de referência para promover ambientes institucionais mais respeitosos, acessíveis, acolhedores e inclusivos para a pessoa longeva.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>12 Anexos Setoriais</h4>
+                    <a href="#sectors">Alimentação</a>
+                    <a href="#sectors">Varejo</a>
+                    <a href="#sectors">Hospedagem</a>
+                    <a href="#sectors">Financeiro</a>
+                    <a href="#sectors">Saúde</a>
+                    <a href="#sectors">Cultural e Lazer</a>
+                    <a href="#sectors">Gestão Pública</a>
+                    <a href="#sectors">Mobilidade e Turismo</a>
+                    <a href="#sectors">Educação</a>
+                    <a href="#sectors">Serviços</a>
+                    <a href="#sectors">Indústria</a>
+                    <a href="#sectors">Agronegócio</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Ânimo Desenvolvimento Humano</h4>
+                    <p>Ricardo de Faria Barros</p>
+                    <p><i class="fas fa-envelope"></i> ricardo@animodh.com.br</p>
+                    <p><i class="fas fa-globe"></i> www.plenalongevidade.com.br</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Documentação</h4>
+                    <a href="#principles">Carta de 15 Princípios</a>
+                    <a href="#sectors">Anexos Setoriais (1-12)</a>
+                    <a href="#process">Checklists de Conformidade</a>
+                    <a href="#">Política de Privacidade</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ânimo Desenvolvimento Humano - Ricardo de Faria Barros. Todos os direitos reservados.</p>
+                <p>Selo Ambiente 60+: Cidadania, Respeito e Empatia</p>
+            </div>
         </div>
+    </footer>
 
-        <div class="grid3">
-          <div class="feature">
-            <i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>
-            <h3>1) Diagnóstico</h3>
-            <p>Aplicação do checklist de adesão e conformidade (documento apresentado à parte).</p>
-          </div>
-          <div class="feature">
-            <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
-            <h3>2) Ajustes</h3>
-            <p>Plano de melhorias com prioridades e orientações fáceis de executar.</p>
-          </div>
-          <div class="feature">
-            <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
-            <h3>3) Capacitação (opcional)</h3>
-            <p>Treinamentos, trilhas e materiais de equipe para consolidar o padrão de atendimento.</p>
-          </div>
-        </div>
+    <script>
+        // Loading Screen
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 1500);
+        });
 
-        <div style="margin-top:14px" class="cta card">
-          <div>
-            <h3>Quer uma proposta rápida para sua realidade?</h3>
-            <p>Você descreve seu tipo de ambiente e eu te devolvo um caminho de adesão simples e prático.</p>
-          </div>
-          <a class="btn btn-primary" href="#contato"><i class="fa-solid fa-envelope"></i> Falar agora</a>
-        </div>
-      </div>
-    </section>
+        // Back to Top Button
+        window.addEventListener('scroll', () => {
+            const backToTop = document.getElementById('backToTop');
+            const navbar = document.getElementById('navbar');
+            
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+            
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
 
-    <!-- SETORES -->
-    <section id="setores">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <span class="tag">Diretrizes por setor</span>
-            <h2>Aplicável a varejo, serviços e mobilidade</h2>
-          </div>
-          <p>
-            O Selo Ambiente 60+ se adapta a diferentes contextos — do balcão ao transporte urbano.
-          </p>
-        </div>
+        // Scroll to Top Function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
 
-        <div class="grid3">
-          <div class="feature">
-            <i class="fa-solid fa-store" aria-hidden="true"></i>
-            <h3>Varejo e atendimento</h3>
-            <p>Filas, balcão, comunicação clara, prioridade e acolhimento no fluxo.</p>
-          </div>
-          <div class="feature">
-            <i class="fa-solid fa-utensils" aria-hidden="true"></i>
-            <h3>Bares e restaurantes</h3>
-            <p>Ambiente confortável, cardápio acessível, equipe preparada e cuidado com autonomia.</p>
-          </div>
-          <div class="feature">
-            <i class="fa-solid fa-bus" aria-hidden="true"></i>
-            <h3>Mobilidade e turismo</h3>
-            <p>Táxis, apps, ônibus, metrô, embarcações, terminais e serviços turísticos.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        // Mobile Menu Toggle
+        document.getElementById('navbarToggle').addEventListener('click', () => {
+            document.getElementById('navbarMenu').classList.toggle('active');
+        });
 
-    <!-- CONTATO -->
-    <section id="contato">
-      <div class="container">
-        <div class="section-title">
-          <div>
-            <span class="tag">Contato</span>
-            <h2>Vamos conversar com calma e objetividade</h2>
-          </div>
-          <p>
-            Me diga qual é o seu ambiente (ex.: loja, restaurante, serviço público, mobilidade) e qual sua prioridade.
-          </p>
-        </div>
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.navbar-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navbarMenu').classList.remove('active');
+            });
+        });
 
-        <div class="two">
-          <div class="box">
-            <h3><i class="fa-solid fa-user-tie" style="color:var(--primary)"></i> Curadoria</h3>
-            <p>
-              <strong>Ricardo de Faria Barros</strong><br/>
-              Psicólogo (CRP 01/7844 DF) · Consultor em Longevidade e Bem-Estar · Ânimo Desenvolvimento Humano
-            </p>
-            <div class="divider"></div>
-            <p class="small">
-              Dica: você pode usar este site como página pública de apresentação e, depois, anexar checklists e materiais
-              em documentos separados (PDFs/links) conforme sua estratégia.
-            </p>
-          </div>
+        // Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-          <div class="box">
-            <h3><i class="fa-solid fa-paper-plane" style="color:var(--accent)"></i> Enviar mensagem</h3>
-            <p class="small">Este formulário abre seu e-mail com um texto pronto. Você pode editar antes de enviar.</p>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
 
-            <form id="mailForm" style="margin-top:12px; display:grid; gap:10px">
-              <label class="small">Seu nome
-                <input id="nome" required placeholder="Ex.: Maria Silva" style="width:100%; margin-top:6px; padding:12px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.06); color:var(--text)">
-              </label>
-              <label class="small">Seu ambiente
-                <input id="ambiente" required placeholder="Ex.: restaurante, loja, serviço público..." style="width:100%; margin-top:6px; padding:12px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.06); color:var(--text)">
-              </label>
-              <label class="small">Prioridade (opcional)
-                <input id="prioridade" placeholder="Ex.: atendimento, acessibilidade, comunicação..." style="width:100%; margin-top:6px; padding:12px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.06); color:var(--text)">
-              </label>
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
 
-              <button type="submit" class="btn btn-primary" style="cursor:pointer">
-                <i class="fa-solid fa-envelope"></i> Abrir e-mail pronto
-              </button>
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
 
-              <a class="btn btn-ghost" href="https://www.plenalongevidade.com.br/selo-60-cidadania-respeito-e-empatia" target="_blank" rel="noopener">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver página oficial
-              </a>
-            </form>
-
-            <p class="small" style="margin-top:12px; color: rgba(255,255,255,.70)">
-              Se preferir, fale diretamente: <strong>(61) 99311-1906</strong>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="foot-grid">
-        <div>
-          <strong>AMBIENTE 60+</strong><br/>
-          <span class="small">Cidadania · Respeito · Empatia</span>
-          <div class="divider"></div>
-          <div class="small">
-            Créditos: Ricardo de Faria Barros · Todos os direitos reservados · 2026
-          </div>
-        </div>
-        <div>
-          <div class="small"><strong>Aviso</strong></div>
-          <div class="small">
-            Este site é um modelo de apresentação. Checklists, trilhas e materiais de conformidade podem ser
-            fornecidos como documentos separados.
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Formulário que abre um e-mail com texto pronto (sem capturar dados no site)
-    const form = document.getElementById('mailForm');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const nome = document.getElementById('nome').value.trim();
-      const ambiente = document.getElementById('ambiente').value.trim();
-      const prioridade = document.getElementById('prioridade').value.trim();
-
-      const subject = encodeURIComponent('Adesão ao Selo Ambiente 60+ — ' + ambiente);
-      let body = `Olá, Ricardo!%0D%0A%0D%0A` +
-                 `Meu nome é ${encodeURIComponent(nome)} e tenho interesse em aderir ao Selo Ambiente 60+. %0D%0A` +
-                 `Nosso ambiente é: ${encodeURIComponent(ambiente)}.%0D%0A`;
-      if (prioridade) {
-        body += `Prioridade neste momento: ${encodeURIComponent(prioridade)}.%0D%0A`;
-      }
-      body += `%0D%0AGostaria de receber orientações sobre o passo a passo de adesão (checklist) e possibilidades de capacitação.%0D%0A%0D%0A` +
-              `Obrigado(a)!%0D%0A` +
-              `${encodeURIComponent(nome)}`;
-
-      // Edite aqui para um e-mail de destino, se desejar:
-      const to = ''; // ex.: "contato@seudominio.com"
-      const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
-      window.location.href = mailto;
-    });
-  </script>
+        // ===== CALCULATOR FUNCTIONALITY =====
+        function calculateOpportunity() {
+            const sector = document.getElementById('sector').value;
+            const companySize = document.getElementById('companySize').value;
+            const region = document.getElementById('region').value;
+            const revenue = document.getElementById('revenue').value;
+            
+            if (!sector || !companySize || !region || !revenue) {
+                alert('Por favor, preencha todos os campos!');
+                return;
+            }
+            
+            const baseMultipliers = {
+                varejo: 0.25,
+                saude: 0.35,
+                financeiro: 0.30,
+                turismo: 0.28,
+                servicos: 0.22,
+                industria: 0.20,
+                educacao: 0.18
+            };
+            
+            const sizeMultipliers = {
+                pequeno: 1.0,
+                medio: 1.5,
+                grande: 2.0
+            };
+            
+            const regionMultipliers = {
+                sudeste: 1.3,
+                sul: 1.2,
+                nordeste: 1.0,
+                norte: 0.9,
+                'centro-oeste': 1.1
+            };
+            
+            const revenueMultipliers = {
+                ate500k: 0.5,
+                '500k-2mi': 1.0,
+                '2mi-10mi': 1.5,
+                '10mi+': 2.0
+            };
+            
+            const baseOpportunity = 1000000;
+            const opportunity = baseOpportunity * 
+                (baseMultipliers[sector] || 0.25) * 
+                (sizeMultipliers[companySize] || 1.0) * 
+                (regionMultipliers[region] || 1.0) * 
+                (revenueMultipliers[revenue] || 1.0);
+            
+            const formattedValue = new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+                maximumFractionDigits: 0
+            }).format(opportunity);
+            
+            document.getElementById('opportunityValue').textContent = formattedValue;
+            document.getElementById('opportunityDescription').textContent = 
+                'Este é o potencial anual que sua empresa pode estar deixando de captar no mercado 60+ na sua região. Com o Selo Ambiente 60+, você pode acessar esta oportunidade!';
+            document.getElementById('calculatorResult').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
