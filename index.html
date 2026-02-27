@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Selo Ambiente 60+: Cidadania, Respeito e Empatia - Uma iniciativa de referência para promover ambientes institucionais mais respeitosos, acessíveis e inclusivos para a pessoa longeva.">
+    <meta name="description" content="Selo Ambiente 60+: Cidadania, Respeito e Empatia - Transforme respeito em resultados financeiros. R$ 2 trilhões de oportunidade.">
     <title>Selo Ambiente 60+ | Cidadania, Respeito e Empatia</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -27,7 +27,6 @@
             --gradient-sky: linear-gradient(135deg, #1d3557 0%, #457b9d 50%, #68a0b3 100%);
             --gradient-warm: linear-gradient(135deg, #e9c46a 0%, #f4a261 50%, #e76f51 100%);
             --gradient-hero: linear-gradient(135deg, #2d6a4f 0%, #40916c 30%, #52b788 60%, #74c69d 100%);
-            --gradient-purple: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             
             --shadow-soft: 0 10px 40px rgba(0,0,0,0.1);
             --shadow-strong: 0 20px 60px rgba(0,0,0,0.15);
@@ -117,7 +116,7 @@
             cursor: pointer;
         }
 
-        /* ===== HERO SECTION ===== */
+        /* ===== HERO SECTION ANIMADA ===== */
         .hero {
             min-height: 100vh;
             background: var(--gradient-hero);
@@ -364,14 +363,14 @@
             animation: rayRotate 20s linear infinite;
         }
 
-        .sun-ray:nth-child(1) { transform: translate(-50%, -100%) rotate(0deg); animation-delay: 0s; }
-        .sun-ray:nth-child(2) { transform: translate(-50%, -100%) rotate(45deg); animation-delay: 2.5s; }
-        .sun-ray:nth-child(3) { transform: translate(-50%, -100%) rotate(90deg); animation-delay: 5s; }
-        .sun-ray:nth-child(4) { transform: translate(-50%, -100%) rotate(135deg); animation-delay: 7.5s; }
-        .sun-ray:nth-child(5) { transform: translate(-50%, -100%) rotate(180deg); animation-delay: 10s; }
-        .sun-ray:nth-child(6) { transform: translate(-50%, -100%) rotate(225deg); animation-delay: 12.5s; }
-        .sun-ray:nth-child(7) { transform: translate(-50%, -100%) rotate(270deg); animation-delay: 15s; }
-        .sun-ray:nth-child(8) { transform: translate(-50%, -100%) rotate(315deg); animation-delay: 17.5s; }
+        .sun-ray:nth-child(1) { transform: translate(-50%, -100%) rotate(0deg); }
+        .sun-ray:nth-child(2) { transform: translate(-50%, -100%) rotate(45deg); }
+        .sun-ray:nth-child(3) { transform: translate(-50%, -100%) rotate(90deg); }
+        .sun-ray:nth-child(4) { transform: translate(-50%, -100%) rotate(135deg); }
+        .sun-ray:nth-child(5) { transform: translate(-50%, -100%) rotate(180deg); }
+        .sun-ray:nth-child(6) { transform: translate(-50%, -100%) rotate(225deg); }
+        .sun-ray:nth-child(7) { transform: translate(-50%, -100%) rotate(270deg); }
+        .sun-ray:nth-child(8) { transform: translate(-50%, -100%) rotate(315deg); }
 
         @keyframes sunPulse {
             0%, 100% {
@@ -381,6 +380,15 @@
             50% {
                 transform: translate(-50%, -50%) scale(1.1);
                 box-shadow: 0 0 50px rgba(244, 162, 97, 0.8);
+            }
+        }
+
+        @keyframes rayRotate {
+            from {
+                transform: translate(-50%, -100%) rotate(var(--rotation));
+            }
+            to {
+                transform: translate(-50%, -100%) rotate(calc(var(--rotation) + 360deg));
             }
         }
 
@@ -621,7 +629,7 @@
             opacity: 0.8;
         }
 
-        /* ===== KPI SECTION - NEW ===== */
+        /* ===== KPI SECTION ===== */
         .kpi-section {
             background: var(--white);
             padding: 100px 0;
@@ -662,19 +670,19 @@
             color: var(--white);
         }
 
-        .kpi-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-green);
-            margin-bottom: 15px;
-        }
-
         .kpi-value {
             font-size: 2.5rem;
             font-weight: 800;
-            color: var(--accent-gold);
+            color: var(--primary-green);
             margin-bottom: 10px;
             font-family: 'Playfair Display', serif;
+        }
+
+        .kpi-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 10px;
         }
 
         .kpi-description {
@@ -684,7 +692,14 @@
             line-height: 1.6;
         }
 
-        /* ===== SO WHAT SECTION - NEW ===== */
+        .kpi-source {
+            font-size: 0.85rem;
+            opacity: 0.6;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        /* ===== SO WHAT SECTION ===== */
         .so-what-section {
             background: var(--gradient-sky);
             color: var(--white);
@@ -847,7 +862,56 @@
             font-size: 0.95rem;
         }
 
-        /* ===== 11 SECTORS ===== */
+        /* ===== 15 PRINCIPLES ===== */
+        .principles {
+            background: var(--white);
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .principle-card {
+            background: var(--light-cream);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid var(--primary-green);
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .principle-card:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .principle-number {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .principle-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .principle-text {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            opacity: 0.75;
+            line-height: 1.6;
+        }
+
+        /* ===== 12 SECTORS ===== */
         .sectors {
             background: var(--gradient-seal);
             color: var(--white);
@@ -920,67 +984,6 @@
         .sector-text {
             font-size: 0.9rem;
             opacity: 0.85;
-            line-height: 1.6;
-        }
-
-        /* ===== 15 PRINCIPLES ===== */
-        .principles {
-            background: var(--white);
-        }
-
-        .principles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-        }
-
-        .principle-card {
-            background: var(--light-cream);
-            padding: 30px;
-            border-radius: 15px;
-            border-left: 4px solid var(--primary-green);
-            transition: all 0.3s ease;
-            box-shadow: var(--shadow-soft);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .principle-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: var(--gradient-border);
-        }
-
-        .principle-card:hover {
-            transform: translateX(5px);
-            box-shadow: var(--shadow-strong);
-        }
-
-        .principle-number {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--primary-green);
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .principle-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 10px;
-            line-height: 1.4;
-        }
-
-        .principle-text {
-            font-size: 0.95rem;
-            color: var(--text-dark);
-            opacity: 0.75;
             line-height: 1.6;
         }
 
@@ -1424,7 +1427,7 @@
             </button>
             <ul class="navbar-menu" id="navbarMenu">
                 <li><a href="#home">Início</a></li>
-                <li><a href="#kpi">KPIs</a></li>
+                <li><a href="#kpi">Dados</a></li>
                 <li><a href="#so-what">So What?</a></li>
                 <li><a href="#business-case">Business Case</a></li>
                 <li><a href="#principles">Princípios</a></li>
@@ -1518,10 +1521,10 @@
                 </a>
             </div>
             <div class="impact-badges">
-                <span class="impact-badge">✓ Aumenta Ticket Médio</span>
-                <span class="impact-badge">✓ Eleva Fidelização (LTV)</span>
-                <span class="impact-badge">✓ Melhora Rating ESG</span>
-                <span class="impact-badge">✓ 12 Setores Atendidos</span>
+                <span class="impact-badge">✓ R$ 2 Trilhões/ano</span>
+                <span class="impact-badge">✓ 59 Milhões 50+</span>
+                <span class="impact-badge">✓ 38% Mais Consumo</span>
+                <span class="impact-badge">✓ 12 Setores</span>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -1529,62 +1532,66 @@
         </div>
     </section>
 
-    <!-- KPI Section - NEW -->
+    <!-- KPI Section -->
     <section class="kpi-section" id="kpi">
         <div class="container">
             <div class="section-header fade-in">
-                <span class="section-tag">Resultados Mensuráveis</span>
-                <h2 class="section-title">Indicadores que o Selo Melhora</h2>
+                <span class="section-tag">Dados da Economia Prateada</span>
+                <h2 class="section-title">O Tamanho da Oportunidade</h2>
                 <p class="section-subtitle">
-                    O Selo Ambiente 60+ não é apenas certificação social. É ferramenta de gestão que impacta diretamente seus resultados financeiros.
+                    Números que não podem ser ignorados por nenhuma estratégia de negócio.
                 </p>
             </div>
             <div class="kpi-grid">
                 <div class="kpi-card fade-in">
                     <div class="kpi-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="kpi-value">R$ 2 Tri</div>
+                    <div class="kpi-label">Movimentação Anual</div>
+                    <p class="kpi-description">
+                        Economia Prateada no Brasil (50+)
+                    </p>
+                    <div class="kpi-source">Fonte: CNN Brasil / Data8, 2024</div>
+                </div>
+                <div class="kpi-card fade-in">
+                    <div class="kpi-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="kpi-value">59 Mi</div>
+                    <div class="kpi-label">Brasileiros 50+</div>
+                    <p class="kpi-description">
+                        Em 2024, representando 24% do consumo privado
+                    </p>
+                    <div class="kpi-source">Fonte: Data8 Brasil Prateado, 2024</div>
+                </div>
+                <div class="kpi-card fade-in">
+                    <div class="kpi-icon">
                         <i class="fas fa-shopping-cart"></i>
                     </div>
-                    <div class="kpi-title">Ticket Médio</div>
-                    <div class="kpi-value">↑</div>
+                    <div class="kpi-value">38%</div>
+                    <div class="kpi-label">Mais Consumo Per Capita</div>
                     <p class="kpi-description">
-                        Ambientes seguros e sinalizados estimulam o consumo de categorias premium. Cliente 60+ sente-se seguro para explorar a loja.
+                        Comparado à população abaixo de 50 anos
                     </p>
+                    <div class="kpi-source">Fonte: Data8, 2024</div>
                 </div>
                 <div class="kpi-card fade-in">
                     <div class="kpi-icon">
-                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-chart-pie"></i>
                     </div>
-                    <div class="kpi-title">LTV (Fidelidade)</div>
-                    <div class="kpi-value">↑↑</div>
+                    <div class="kpi-value">40%</div>
+                    <div class="kpi-label">Da População em 2044</div>
                     <p class="kpi-description">
-                        O cliente 60+ é o mais fiel: uma vez respeitado, ele não troca de marca. Reduz CAC e mantém base ativa e recorrente.
+                        Projeção de crescimento demográfico
                     </p>
-                </div>
-                <div class="kpi-card fade-in">
-                    <div class="kpi-icon">
-                        <i class="fas fa-smile"></i>
-                    </div>
-                    <div class="kpi-title">NPS (Satisfação)</div>
-                    <div class="kpi-value">↑</div>
-                    <p class="kpi-description">
-                        Eleva o índice de recomendação da loja perante as famílias e a comunidade. Boca a boca poderoso.
-                    </p>
-                </div>
-                <div class="kpi-card fade-in">
-                    <div class="kpi-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <div class="kpi-title">Rating ESG</div>
-                    <div class="kpi-value">↑</div>
-                    <p class="kpi-description">
-                        Cumpre o pilar Social, facilitando acesso a crédito e parcerias estratégicas. Atrai investidores conscientes.
-                    </p>
+                    <div class="kpi-source">Fonte: ONU, 2024</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- So What Section - NEW -->
+    <!-- So What Section -->
     <section class="so-what-section" id="so-what">
         <div class="container">
             <div class="section-header fade-in">
